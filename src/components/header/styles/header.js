@@ -30,7 +30,7 @@ export const Links = styled.div`
 `;
 
 export const Link = styled.h2`
-    font-size: 1.1229166666666667vw;
+    font-size: 1.1029166666666667vw;
     font-weight: 600;
     color: #2D3142;
     margin-right: 3rem;
@@ -44,8 +44,8 @@ export const Price = styled.p`
 `;
 
 export const ShoppingCart = styled.div`
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #EF8354;
     display: flex;
@@ -54,7 +54,7 @@ export const ShoppingCart = styled.div`
 
     i {
         color: #FFFFFF;
-        font-size: 1.2927083333333333vw;
+        font-size: 1.1927083333333333vw;
     }
 
     @media (max-width: 1400px) {
