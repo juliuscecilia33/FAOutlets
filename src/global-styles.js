@@ -16,8 +16,8 @@ export const GlobalStyles = createGlobalStyle `
         padding: 0;
         line-height: 1;
         font-family: 'Roboto', sans-serif;
-        color: #202020;
-        background-color: #fafafa;
+        color: #000000;
+        background-color: #FFFFFC;
         font-smooth: always;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
