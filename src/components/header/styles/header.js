@@ -55,3 +55,7 @@ export const Checkout = styled.div`
     width: 10%;
     height: 100%;
 `;
+
+export const ShoppingBadge = styled.div`
+
+`;

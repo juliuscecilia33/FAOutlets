@@ -1,11 +1,10 @@
 import React from 'react';
+import { HeaderContainer } from '../containers/header';
 
 export default function Shop() {
     return (
         <>
-            <Header>
-                
-            </Header>
+            <HeaderContainer></HeaderContainer>
         </>
     )
 }
