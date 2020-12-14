@@ -2,41 +2,50 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
     width: 100%;
-    height: 7vh;
+    height: 8vh;
     display: flex;
     align-items: center;
+    padding: 0 1.5rem;
 `;
 
 export const Logo = styled.div`
-    width: 10%;
+    width: 15%;
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     img {
-        width: 189px;
-        height: 51px;
+        width: 7.3046875vw;
+        height: auto;
     }
 `;
 
 export const Links = styled.div`
-    width: 80%;
+    width: 70%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const Link = styled.h2`
-    font-size: 28px;
+    font-size: 1.1229166666666667vw;
     font-weight: 600;
     color: #2D3142;
+    margin-right: 3rem;
 `;
 
 export const Price = styled.p`
-    font-size: 24px;
+    font-size: 1.0229166666666667vw;
     font-weight: 700;
     color: #2D3142;
+    margin-right: 0.5rem;
 `;
 
 export const ShoppingCart = styled.div`
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background-color: #EF8354;
     display: flex;
@@ -45,14 +54,20 @@ export const ShoppingCart = styled.div`
 
     i {
         color: #FFFFFF;
-        font-size: 26px;
+        font-size: 1.2927083333333333vw;
+    }
+
+    @media (max-width: 1400px) {
+        width: 40px;
+        height: 40px;
     }
 `;
 
 export const Checkout = styled.div`
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    width: 10%;
+    width: 15%;
     height: 100%;
 `;
 
