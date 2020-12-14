@@ -1,3 +1,18 @@
+# Food Allergy Outlets
+<h2>An E-commerce Store for Food Allergy manufacturers and products, made with React.js, Commerce.js, and Stripe.</h2>
+
+
+Prototype (Built in Figma)
+<br />
+
+![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/src/Images/ShopPagePrototype.jpg)
+
+
+
+
+
+<br />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
