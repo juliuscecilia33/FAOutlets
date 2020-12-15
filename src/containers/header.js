@@ -1,15 +1,16 @@
 import React from 'react';
 import { Header } from '../components';
+import * as ROUTES from '../constants/routes';
 
 export function HeaderContainer() {
     return (
         <Header>
             <Header.Logo />
             <Header.Links>
-                <Header.Link>Home</Header.Link>
-                <Header.Link>Shop</Header.Link>
-                <Header.Link>News</Header.Link>
-                <Header.Link>Contact</Header.Link>
+                <Header.Link to={ROUTES.HOME}>Home</Header.Link>
+                <Header.Link to={ROUTES.SHOP}>Shop</Header.Link>
+                <Header.Link to={ROUTES.NEWS}>News</Header.Link>
+                <Header.Link to={ROUTES.CONTACT}>Contact</Header.Link>
             </Header.Links>
             <Header.Checkout>
                 <Header.Price>$17.00</Header.Price>

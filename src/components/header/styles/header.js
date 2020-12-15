@@ -29,11 +29,13 @@ export const Links = styled.div`
     align-items: center;
 `;
 
-export const Link = styled.h2`
+export const Link = styled.a`
     font-size: 1.1029166666666667vw;
     font-weight: 600;
     color: #2D3142;
     margin-right: 3rem;
+    text-decoration: none;
+    cursor: pointer;
 `;
 
 export const Price = styled.p`
