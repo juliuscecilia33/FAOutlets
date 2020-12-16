@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Contact, Checkout, News, Shop } from './pages';
+import { Home, Contact, Checkout, News, Manufacturers, Products } from './pages';
 import * as ROUTES from './constants/routes';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -24,8 +24,12 @@ export default function App() {
           <News />
         </Route>
 
-        <Route path={ROUTES.SHOP} exact>
-          <Shop />
+        <Route path={ROUTES.MANUFACTURERS} exact>
+          <Manufacturers />
+        </Route>
+
+        <Route path={ROUTES.PRODUCTS} exact>
+          <Products />
         </Route>
 
       </Switch>

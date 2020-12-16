@@ -8,7 +8,7 @@ export function HeaderContainer() {
             <Header.Logo />
             <Header.Links>
                 <Header.Link to={ROUTES.HOME}>Home</Header.Link>
-                <Header.Link to={ROUTES.SHOP}>Shop</Header.Link>
+                <Header.Link to={ROUTES.MANUFACTURERS}>Shop</Header.Link>
                 <Header.Link to={ROUTES.NEWS}>News</Header.Link>
                 <Header.Link to={ROUTES.CONTACT}>Contact</Header.Link>
             </Header.Links>
