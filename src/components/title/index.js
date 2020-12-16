@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Text, Description } from './styles/title';
+import { Container, Text, Description, DescrText } from './styles/title';
 
 export default function Title({ children, ...restProps }) {
     return (
@@ -13,5 +13,9 @@ Title.Text = function TitleText({ children, ...restProps }) {
 }
 
 Title.Description = function TitleDescription({ children, ...restProps }) {
-    return <Description {...restProps}>{children}</Description>
+    return (
+        <Description {...restProps}>
+            <DescrText>{children}</DescrText>
+        </Description>
+    )
 }
