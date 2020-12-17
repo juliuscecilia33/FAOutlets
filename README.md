@@ -5,8 +5,9 @@
 Prototype (Built in Figma)
 <br />
 
-![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/src/Images/ShopPagePrototype.jpg)
-
+![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/ShopPagePrototype.jpg)
+<br />
+![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/ProductPagePrototype.jpg)
 
 
 
