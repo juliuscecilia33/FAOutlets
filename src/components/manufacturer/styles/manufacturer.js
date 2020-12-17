@@ -3,14 +3,14 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 284px;
     border: 5px solid #EF8354;
     border-radius: 50px;
-    ${'' /* background-image: url("./Images/ArrowheadMillsTest.jpg"); */}
-    background: gray;
+    background-image: url(${({ src }) => src});
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
+    padding: 1.5rem 0 0 1.5rem;
 `;
 
 export const Row = styled.div`
@@ -24,7 +24,8 @@ export const Row = styled.div`
 export const Title = styled.h2`
     font-size: 28px;
     font-weight: 700;
-    color: ##FFFFFF;
+    color: #FFFFFF;
+    margin-bottom: 0.7rem;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -35,8 +36,8 @@ export const DescriptionContainer = styled.div`
 
 export const Description = styled.p`
     font-size: 20px;
-    font-weight: 600;
-    color: ##FFFFFF;
+    font-weight: 500;
+    color: #FFFFFF;
 `;
 
 export const LogoPlacement = styled.div`

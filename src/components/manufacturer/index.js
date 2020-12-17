@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container, Row, Title, Description, LogoPlacement, DescriptionContainer } from './styles/manufacturer.js';
 
-export default function Manufacturer({ children, ...restProps }) {
+export default function Manufacturer({ src, children, ...restProps }) {
     return (
-        <Container {...restProps}>{children}</Container>
+        <Container {...restProps} src={src}>{children}</Container>
     )
 }
 
