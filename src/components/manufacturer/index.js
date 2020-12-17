@@ -1,9 +1,30 @@
 import React from 'react';
 
-import { Container } from './styles/manufacturer.js';
+import { Container, Row, Title, Description, LogoPlacement } from './styles/manufacturer.js';
 
 export default function Manufacturer({ children, ...restProps }) {
     return (
         <Container {...restProps}>{children}</Container>
     )
 }
+
+Manufacturer.Row = function ManufacturerRow({ children, ...restProps }) {
+    return <Row {...restProps}>{children}</Row>
+}
+
+Manufacturer.Title = function ManufacturerTitle({ children, ...restProps }) {
+    return <Title {...restProps}>{children}</Title>
+}
+
+Manufacturer.Description = function ManufacturerDescription({ children, ...restProps }) {
+    return <Description {...restProps}>{children}</Description>
+}
+
+Manufacturer.LogoPlacement = function ManufacturerLogoPlacement({ src, children, ...restProps }) {
+    return (
+        <LogoPlacement {...restProps}>
+            <img src={src} alt="Manufacturer Logo" />
+        </LogoPlacement>
+    )
+}
+
