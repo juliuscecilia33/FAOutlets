@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 import { Container, Row, Title, Description, LogoPlacement, DescriptionContainer } from './styles/manufacturer.js';
 
-export default function Manufacturer({ src, children, ...restProps }) {
+export default function Manufacturer({ to, src, children, ...restProps }) {
     return (
-        <Container {...restProps} src={`/images/${src}.jpg`}>{children}</Container>
+        <ReactRouterLink to={to}>
+            <Container {...restProps} src={`/images/${src}.jpg`}>{children}</Container>
+        </ReactRouterLink>
     )
 }
 

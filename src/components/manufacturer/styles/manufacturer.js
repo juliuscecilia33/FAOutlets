@@ -1,16 +1,19 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
+export const Container = styled.a`
     position: relative;
     width: 300px;
     height: 284px;
+    outline: none;
     border: 5px solid #EF8354;
     border-radius: 50px;
     background-image: url(${({ src }) => src});
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
-    padding: 1.5rem 0 0 1.5rem;
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+    cursor: pointer;
 `;
 
 export const Row = styled.div`

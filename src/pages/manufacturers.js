@@ -1,8 +1,12 @@
 import React from 'react';
 import { Title } from '../components';
 import { HeaderContainer, ManufacturersContainer } from '../containers';
+import { Route, useRouteMatch } from 'react-router-dom';
+
 
 export default function Manufacturers() {
+    const { path } = useRouteMatch();
+
     return (
         <>
             <HeaderContainer></HeaderContainer>
@@ -10,7 +14,7 @@ export default function Manufacturers() {
                 <Title.Text>Shop</Title.Text>
                 <Title.Description>Allergy-friendly Manufacturers</Title.Description>
             </Title>
-            <ManufacturersContainer></ManufacturersContainer>
+            <ManufacturersContainer path={path}></ManufacturersContainer>
         </>
     )
 }

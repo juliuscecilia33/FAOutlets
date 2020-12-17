@@ -28,9 +28,9 @@ export default function App() {
           <Manufacturers />
         </Route>
 
-        <Route path={ROUTES.PRODUCTS} exact>
+        {/* <Route path={ROUTES.PRODUCTS} exact>
           <Products />
-        </Route>
+        </Route> */}
 
       </Switch>
     </Router>

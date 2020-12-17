@@ -41,4 +41,9 @@ export const GlobalStyles = createGlobalStyle `
         text-decoration: none;
         color: #fff;
     }
+
+    button {
+        margin: 0;
+        padding: 0;
+    }
 `;
