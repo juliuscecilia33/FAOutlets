@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import FAOutletsLogo from '../../Images/FAOutletsLogo.png';
+// import FAOutletsLogo from '../../Images/FAOutletsLogo.png';
 
 import { Container, Logo, Links, Link, Price, Checkout, ShoppingCart, ShoppingBadge } from './styles/header';
 
@@ -13,7 +13,7 @@ export default function Header({ children, ...restProps }) {
 Header.Logo = function HeaderLogo({ children, ...restProps }) {
     return (
         <Logo {...restProps}>
-            <img src={FAOutletsLogo} alt="FA Logo" />
+            <img src="/images/FAOutletsLogo.png" alt="FA Logo" />
         </Logo>
     )
 }

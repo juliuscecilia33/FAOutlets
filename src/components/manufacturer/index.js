@@ -4,7 +4,7 @@ import { Container, Row, Title, Description, LogoPlacement, DescriptionContainer
 
 export default function Manufacturer({ src, children, ...restProps }) {
     return (
-        <Container {...restProps} src={src}>{children}</Container>
+        <Container {...restProps} src={`/images/${src}.jpg`}>{children}</Container>
     )
 }
 
@@ -28,7 +28,7 @@ Manufacturer.Description = function ManufacturerDescription({ children, ...restP
 Manufacturer.LogoPlacement = function ManufacturerLogoPlacement({ src, children, ...restProps }) {
     return (
         <LogoPlacement {...restProps}>
-            <img src={src} alt="Manufacturer Logo" />
+            <img src={`/images/${src}.png`} alt="Manufacturer Logo" />
         </LogoPlacement>
     )
 }
