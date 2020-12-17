@@ -8,16 +8,23 @@ export const Container = styled.div`
     padding: 0 1.5rem;
 `;
 
-export const Logo = styled.button`
+export const LogoContainer = styled.div`
     width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+`;
+
+export const Logo = styled.button`
+    width: 100%;
     height: 100%;
     outline: none;
     background: none;
     border: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
 

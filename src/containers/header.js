@@ -5,7 +5,9 @@ import * as ROUTES from '../constants/routes';
 export function HeaderContainer() {
     return (
         <Header>
-            <Header.Logo to={ROUTES.HOME} />
+            <Header.LogoContainer>
+                <Header.Logo to={ROUTES.HOME} />
+            </Header.LogoContainer>
             <Header.Links>
                 <Header.Link to={ROUTES.HOME}>Home</Header.Link>
                 <Header.Link to={ROUTES.MANUFACTURERS}>Shop</Header.Link>
