@@ -8,12 +8,18 @@ export const Container = styled.div`
     padding: 0 1.5rem;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.button`
     width: 15%;
     height: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 
     img {
         width: 7.3046875vw;

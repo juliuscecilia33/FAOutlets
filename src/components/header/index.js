@@ -10,11 +10,13 @@ export default function Header({ children, ...restProps }) {
     )
 }
 
-Header.Logo = function HeaderLogo({ children, ...restProps }) {
+Header.Logo = function HeaderLogo({ to, children, ...restProps }) {
     return (
-        <Logo {...restProps}>
-            <img src="/images/FAOutletsLogo.png" alt="FA Logo" />
-        </Logo>
+        <ReactRouterLink to={to}>
+            <Logo {...restProps}>
+                <img src="/images/FAOutletsLogo.png" alt="FA Logo" />
+            </Logo>
+        </ReactRouterLink>
     )
 }
 
