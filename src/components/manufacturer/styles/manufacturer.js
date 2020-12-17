@@ -27,6 +27,12 @@ export const Title = styled.h2`
     color: ##FFFFFF;
 `;
 
+export const DescriptionContainer = styled.div`
+    max-width: 205px;
+    width: 100%;
+    height: 120px;
+`;
+
 export const Description = styled.p`
     font-size: 20px;
     font-weight: 600;
