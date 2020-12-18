@@ -18,5 +18,3 @@ export function ManufacturersContainer({ path }) {
         </Manufacturer.Row>
     )
 }
-
-// put manufacturer container
