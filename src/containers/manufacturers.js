@@ -8,13 +8,15 @@ import { Manufacturer } from '../components';
 export function ManufacturersContainer({ path, products, categories }) {
     return (
         <Manufacturer.Row>
-            <Manufacturer src="ArrowheadMillsTest" to={`${path}/ArrowheadMillsTest`}>
-                <Manufacturer.Title>Arrowhead Mills</Manufacturer.Title>
-                <Manufacturer.DescriptionContainer>
-                    <Manufacturer.Description>Wheat-free and gluten-free baking mixes, grains and flours.</Manufacturer.Description>
-                </Manufacturer.DescriptionContainer>
-                <Manufacturer.LogoPlacement src="ArrowheadMillsLogo"></Manufacturer.LogoPlacement>
-            </Manufacturer>
+            {categories.map((category) => (
+                <Manufacturer src={category.slug} to={`${path}/${category.slug}`}>
+                    <Manufacturer.Title>{category.name}</Manufacturer.Title>
+                    <Manufacturer.DescriptionContainer>
+                        <Manufacturer.Description>{category.description}</Manufacturer.Description>
+                    </Manufacturer.DescriptionContainer>
+                    <Manufacturer.LogoPlacement src={category.slug}></Manufacturer.LogoPlacement>
+                </Manufacturer>
+            ))}
         </Manufacturer.Row>
     )
 }

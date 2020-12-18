@@ -31,7 +31,7 @@ Manufacturer.Description = function ManufacturerDescription({ children, ...restP
 Manufacturer.LogoPlacement = function ManufacturerLogoPlacement({ src, children, ...restProps }) {
     return (
         <LogoPlacement {...restProps}>
-            <img src={`/images/${src}.png`} alt="Manufacturer Logo" />
+            <img src={`/images/${src}logo.png`} alt="Manufacturer Logo" />
         </LogoPlacement>
     )
 }
