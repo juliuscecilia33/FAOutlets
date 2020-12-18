@@ -1,5 +1,5 @@
 # Food Allergy Outlets
-<h2>An E-commerce Store for Food Allergy manufacturers and products, made with React.js, Commerce.js, and Stripe.</h2>
+<h2>An E-commerce Store that combines all Food Allergy manufacturers and products into one online hub. Website is made with React.js, Commerce.js, and Stripe.</h2>
 
 
 Prototype (Built in Figma)
