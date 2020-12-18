@@ -4,7 +4,7 @@ import { HeaderContainer, ManufacturersContainer } from '../containers';
 import { Route, useRouteMatch } from 'react-router-dom';
 
 
-export default function Manufacturers() {
+export default function Manufacturers({ categories, products }) {
     const { path } = useRouteMatch();
 
     return (
@@ -14,7 +14,7 @@ export default function Manufacturers() {
                 <Title.Text>Shop</Title.Text>
                 <Title.Description>Allergy-friendly Manufacturers</Title.Description>
             </Title>
-            <ManufacturersContainer path={path}></ManufacturersContainer>
+            <ManufacturersContainer categories={categories} products={products} path={path}></ManufacturersContainer>
         </>
     )
 }

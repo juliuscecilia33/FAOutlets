@@ -5,7 +5,7 @@ import { Manufacturer } from '../components';
 // import BobsRedMillLogo from '../Images/BobsRedMillLogo.png';
 // import ArrowheadMillsTest from '../Images/ArrowheadMillsTest.jpg';
 
-export function ManufacturersContainer({ path }) {
+export function ManufacturersContainer({ path, products, categories }) {
     return (
         <Manufacturer.Row>
             <Manufacturer src="ArrowheadMillsTest" to={`${path}/ArrowheadMillsTest`}>

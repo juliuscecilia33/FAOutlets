@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Home, Contact, Checkout, News, Manufacturers, Products } from './pages';
+import { commerce } from './lib/commerce';
 import * as ROUTES from './constants/routes';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 export default function App() {
+  const [ products, setProducts ] = useState([]);
+  const [ categories, setCategories ] = useState([]);
+
+  const fetchCategories = async () => {
+    const { data } = await commerce.categories.list();
+
+    setCategories(data);
+    
+    console.log(data);
+  }
+
+  const fetchProducts = async () => {
+    const { data } = await commerce.products.list();
+
+    setProducts(data);
+    
+    console.log(data);
+  }
+
+  useEffect(() => {
+    fetchCategories();
+    fetchProducts();
+  }, []);
+
   return (
     <Router>
       <Switch>
@@ -25,7 +50,7 @@ export default function App() {
         </Route>
 
         <Route path={ROUTES.MANUFACTURERS} exact>
-          <Manufacturers />
+          <Manufacturers categories={categories} products={products} />
         </Route>
 
         {/* <Route path={ROUTES.PRODUCTS} exact>
