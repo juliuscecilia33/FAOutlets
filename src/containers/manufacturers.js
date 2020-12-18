@@ -1,6 +1,5 @@
 import React from 'react';
 import { Manufacturer } from '../components';
-import { Route, useRouteMatch } from 'react-router-dom';
 // import ArrowheadMillsLogo from '../Images/ArrowheadMillsLogo.png';
 // import BirkettMillsLogo from '../Images/BirkettMillsLogo.png';
 // import BobsRedMillLogo from '../Images/BobsRedMillLogo.png';
