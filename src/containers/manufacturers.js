@@ -9,7 +9,7 @@ export function ManufacturersContainer({ path, products, categories }) {
     return (
         <Manufacturer.Row>
             {categories.map((category) => (
-                <Manufacturer src={category.slug} to={`${path}/${category.slug}`}>
+                <Manufacturer key={category.slug} src={category.slug} to={`${path}/${category.slug}`}>
                     <Manufacturer.Title>{category.name}</Manufacturer.Title>
                     <Manufacturer.DescriptionContainer>
                         <Manufacturer.Description>{category.description}</Manufacturer.Description>

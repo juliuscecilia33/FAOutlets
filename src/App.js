@@ -13,7 +13,7 @@ export default function App() {
 
     setCategories(data);
     
-    console.log(data);
+    // console.log(data);
   }
 
   const fetchProducts = async () => {
@@ -21,7 +21,7 @@ export default function App() {
 
     setProducts(data);
     
-    console.log(data);
+    // console.log(data);
   }
 
   useEffect(() => {
@@ -53,9 +53,9 @@ export default function App() {
           <Manufacturers categories={categories} products={products} />
         </Route>
 
-        {/* <Route path={ROUTES.PRODUCTS} exact>
+        <Route path={ROUTES.PRODUCTS} exact>
           <Products />
-        </Route> */}
+        </Route>
 
       </Switch>
     </Router>

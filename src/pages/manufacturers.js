@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title } from '../components';
 import { HeaderContainer, ManufacturersContainer } from '../containers';
-import { Route, useRouteMatch } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 
 
 export default function Manufacturers({ categories, products }) {

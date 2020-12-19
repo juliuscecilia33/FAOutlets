@@ -1,8 +1,14 @@
 import React from 'react';
 import { Title } from '../components';
 import { HeaderContainer } from '../containers/header';
+import { useRouteMatch } from 'react-router-dom';
 
 export default function Products() {
+    
+    const { path } = useRouteMatch();
+
+    console.log(path);
+
     return (
         <>
             <HeaderContainer></HeaderContainer>
