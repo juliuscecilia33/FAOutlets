@@ -3,13 +3,10 @@ import { Home, Contact, Checkout, News, Manufacturers, Products } from './pages'
 import { commerce } from './lib/commerce';
 import * as ROUTES from './constants/routes';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import { ProductsContext } from './context/products';
 
 export default function App() {
   const [ products, setProducts ] = useState([]);
   const [ categories, setCategories ] = useState([]);
-  const [ productsLink, setProductsLink ] = useState(null);
-  const [ category, setCategory ] = useState(null);
 
   const fetchCategories = async () => {
     const { data } = await commerce.categories.list();
@@ -32,10 +29,10 @@ export default function App() {
     fetchProducts();
   }, []);
 
-  console.log(productsLink);
+  // console.log(productsLink);
 
   return (
-    <ProductsContext.Provider value={{ productsLink, setProductsLink, category, setCategory }}>
+    
       <Router>
         <Switch>
 
@@ -59,13 +56,12 @@ export default function App() {
             <Manufacturers categories={categories} />
           </Route>
 
-          <Route path={`${ROUTES.MANUFACTURERS}/${productsLink}`} exact>
-            <Products category={category} />
+          <Route path="/manufacturers/:manufacturerId">
+            <Products />
           </Route>
 
         </Switch>
       </Router>
-    </ProductsContext.Provider>
   );
 }
 
