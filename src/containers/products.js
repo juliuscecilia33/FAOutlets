@@ -1,13 +1,19 @@
 import React from 'react';
 
-export function ProductsContainer({ match }) {
+export function ProductsContainer({ match, products }) {
+
     const {
         params: { manufacturerId }
     } = match;
 
-    console.log(manufacturerId);
-
     return (
-        <h1>Hello</h1>
+        <>
+            {
+                products.map((product, index) => {
+                    return product[index].categories[index].id === manufacturerId &&
+                        <h3>{product.name}</h3>
+                })
+            }
+        </>
     )
 }

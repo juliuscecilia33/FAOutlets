@@ -1,8 +1,8 @@
 import React from 'react';
 import { Title } from '../components';
-import { HeaderContainer } from '../containers';
+import { HeaderContainer, ProductsContainer } from '../containers';
 
-export default function Products() {
+export default function Products({ products }) {
     return (
         <>
             <HeaderContainer />
@@ -10,6 +10,7 @@ export default function Products() {
                 <Title.Text>Enjoy Life Foods</Title.Text>
                 <Title.Description>Allergy-free bagels, snack bars, cookies, cereals, granola and chocolate.</Title.Description>
             </Title>
+            <ProductsContainer products={products} />
         </>
     )
 }

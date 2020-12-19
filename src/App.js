@@ -29,7 +29,10 @@ export default function App() {
     fetchProducts();
   }, []);
 
-  // console.log(productsLink);
+  console.log("categories: ");
+  console.log(categories);
+  console.log("products: ");
+  // console.log(products[0].categories[0].id);
 
   return (
     
@@ -56,9 +59,9 @@ export default function App() {
             <Manufacturers categories={categories} />
           </Route>
 
-          <Route path="/manufacturers/:manufacturerId">
-            <Products />
-          </Route>
+          <Route path="/manufacturers/:manufacturerId" render={({match}) => (
+            <Products products={products} match={match} />
+          )}/>
 
         </Switch>
       </Router>
