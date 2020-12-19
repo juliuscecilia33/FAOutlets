@@ -3,10 +3,13 @@ import { Home, Contact, Checkout, News, Manufacturers, Products } from './pages'
 import { commerce } from './lib/commerce';
 import * as ROUTES from './constants/routes';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { ProductsContext } from './context/products';
 
 export default function App() {
   const [ products, setProducts ] = useState([]);
   const [ categories, setCategories ] = useState([]);
+  const [ productsLink, setProductsLink ] = useState(null);
+  const [ category, setCategory ] = useState(null);
 
   const fetchCategories = async () => {
     const { data } = await commerce.categories.list();
@@ -29,36 +32,40 @@ export default function App() {
     fetchProducts();
   }, []);
 
+  console.log(productsLink);
+
   return (
-    <Router>
-      <Switch>
+    <ProductsContext.Provider value={{ productsLink, setProductsLink, category, setCategory }}>
+      <Router>
+        <Switch>
 
-        <Route path={ROUTES.HOME} exact>
-          <Home />
-        </Route>
+          <Route path={ROUTES.HOME} exact>
+            <Home />
+          </Route>
 
-        <Route path={ROUTES.CONTACT} exact>
-          <Contact />
-        </Route>
+          <Route path={ROUTES.CONTACT} exact>
+            <Contact />
+          </Route>
 
-        <Route path={ROUTES.CHECKOUT} exact>
-          <Checkout />
-        </Route>
+          <Route path={ROUTES.CHECKOUT} exact>
+            <Checkout />
+          </Route>
 
-        <Route path={ROUTES.NEWS} exact>
-          <News />
-        </Route>
+          <Route path={ROUTES.NEWS} exact>
+            <News />
+          </Route>
 
-        <Route path={ROUTES.MANUFACTURERS} exact>
-          <Manufacturers categories={categories} products={products} />
-        </Route>
+          <Route path={ROUTES.MANUFACTURERS} exact>
+            <Manufacturers categories={categories} />
+          </Route>
 
-        <Route path={ROUTES.PRODUCTS} exact>
-          <Products />
-        </Route>
+          <Route path={`${ROUTES.MANUFACTURERS}/${productsLink}`} exact>
+            <Products category={category} />
+          </Route>
 
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
+    </ProductsContext.Provider>
   );
 }
 
