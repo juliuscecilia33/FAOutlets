@@ -10,6 +10,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 0 1.3rem;
 `;
 
 export const Row = styled.div`
@@ -91,9 +92,14 @@ export const CartContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    i {
-        width: 20px;
-        height: auto;
-        background: #FFFFFF;
+    a {
+        
+        i {
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF;
+        }
     }
+
 `;

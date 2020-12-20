@@ -33,7 +33,7 @@ Product.CartPrice = function ProductCartPrice({ children, ...restProps }) {
                 <Price>{children}</Price>
             </PriceContainer>
             <CartContainer>
-                <i class="fas fa-shopping-bag"></i>
+                <a href="/"><i class="fas fa-shopping-bag"></i></a>
             </CartContainer>
         </CartPrice>
     )

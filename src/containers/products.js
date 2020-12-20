@@ -7,16 +7,13 @@ export function ProductsContainer({ products, match }) {
         params: { manufacturerId }
     } = match;
 
-
-    console.log(products);
-
     return (
         <>
             <Product.Row>
                 {
                     products.map((product, index) => {
                         return product.categories[0].id === manufacturerId &&
-                            <Product>
+                            <Product key={index}>
                                 <Product.Picture>
                                     <img src={product.media.source} alt="Product Display" />
                                 </Product.Picture>
