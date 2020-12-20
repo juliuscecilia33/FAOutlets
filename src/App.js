@@ -29,11 +29,6 @@ export default function App() {
     fetchProducts();
   }, []);
 
-  console.log("categories: ");
-  console.log(categories);
-  console.log("products: ");
-  // console.log(products[0].categories[0].id);
-
   return (
     
       <Router>

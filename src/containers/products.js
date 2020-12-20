@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ProductsContainer({ match, products }) {
+export function ProductsContainer({ products, match }) {
 
     const {
         params: { manufacturerId }
@@ -10,10 +10,12 @@ export function ProductsContainer({ match, products }) {
         <>
             {
                 products.map((product, index) => {
-                    return product[index].categories[index].id === manufacturerId &&
+                    return product.categories[0].id === manufacturerId &&
                         <h3>{product.name}</h3>
                 })
             }
         </>
     )
 }
+
+// product[index].categories[index].id === manufacturerId &&

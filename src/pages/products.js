@@ -2,7 +2,7 @@ import React from 'react';
 import { Title } from '../components';
 import { HeaderContainer, ProductsContainer } from '../containers';
 
-export default function Products({ products }) {
+export default function Products({ products, match }) {
     return (
         <>
             <HeaderContainer />
@@ -10,7 +10,7 @@ export default function Products({ products }) {
                 <Title.Text>Enjoy Life Foods</Title.Text>
                 <Title.Description>Allergy-free bagels, snack bars, cookies, cereals, granola and chocolate.</Title.Description>
             </Title>
-            <ProductsContainer products={products} />
+            <ProductsContainer products={products} match={match} />
         </>
     )
 }
