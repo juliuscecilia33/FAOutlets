@@ -22,8 +22,8 @@ Product.Title = function ProductTitle({ children, ...restProps }) {
     return <Title {...restProps}>{children}</Title>
 }
 
-Product.Description = function ProductDescription({ children, ...restProps }) {
-    return <Description {...restProps}>{children}</Description>
+Product.Description = function ProductDescription({ dangerouslySetInnerHTML, ...restProps }) {
+    return <Description {...restProps}>{dangerouslySetInnerHTML}</Description>
 }
 
 Product.CartPrice = function ProductCartPrice({ children, ...restProps }) {

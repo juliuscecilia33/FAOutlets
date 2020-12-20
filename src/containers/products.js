@@ -20,7 +20,7 @@ export function ProductsContainer({ products, match }) {
                                     <img src={product.media.source} alt="Product Display" />
                                 </Product.Picture>
                                 <Product.Title>{product.name}</Product.Title>
-                                <Product.Description>{product.description}</Product.Description>
+                                <Product.Description dangerouslySetInnerHTML={{ __html: product.description }} />
                                 <Product.CartPrice>{product.price.formatted_with_symbol}</Product.CartPrice>
                             </Product>
                     })
@@ -29,3 +29,5 @@ export function ProductsContainer({ products, match }) {
         </>
     )
 }
+
+
