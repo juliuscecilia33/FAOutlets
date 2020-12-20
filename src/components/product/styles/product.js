@@ -51,6 +51,7 @@ export const Description = styled.p`
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+    line-height: 16px;
     text-align: center;
     color: #E5E5E5;
 `;

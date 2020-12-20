@@ -7,6 +7,7 @@ export function ProductsContainer({ products, match }) {
         params: { manufacturerId }
     } = match;
 
+
     console.log(products);
 
     return (
@@ -20,7 +21,7 @@ export function ProductsContainer({ products, match }) {
                                     <img src={product.media.source} alt="Product Display" />
                                 </Product.Picture>
                                 <Product.Title>{product.name}</Product.Title>
-                                <Product.Description dangerouslySetInnerHTML={{ __html: product.description }} />
+                                <Product.Description>{product.description.slice(0, -4).substring(3, )}</Product.Description>
                                 <Product.CartPrice>{product.price.formatted_with_symbol}</Product.CartPrice>
                             </Product>
                     })
