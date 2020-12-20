@@ -10,10 +10,10 @@ Product.Row = function ProductRow({ children, ...restProps }) {
     return <Row {...restProps}>{children}</Row>
 }
 
-Product.Picture = function ProductPicture({ slug, productName, ...restProps }) {
+Product.Picture = function ProductPicture({ children, ...restProps }) {
     return (
         <Picture {...restProps}>
-            <img src={`/images/${slug}/${productName}`} alt="Product Display" />
+            {children}
         </Picture>
     )
 }

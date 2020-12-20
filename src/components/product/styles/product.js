@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Row = styled.div`
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,8 +32,8 @@ export const Picture = styled.div`
     overflow: visible;
 
     img {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: auto;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 `;
