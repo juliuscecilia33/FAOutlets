@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -6,6 +6,8 @@ export function ProductsContainer({ products, match }) {
         params: { manufacturerId }
     } = match;
 
+    console.log(products);
+
     return (
         <>
             {
@@ -17,5 +19,3 @@ export function ProductsContainer({ products, match }) {
         </>
     )
 }
-
-// product[index].categories[index].id === manufacturerId &&
