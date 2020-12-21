@@ -11,7 +11,7 @@ export function ProductsContainer({ products, match }) {
         <>
             <Product.Row>
                 {
-                    products.map((product, index) => {
+                    products.slice(0, 5).map((product, index) => {
                         return product.categories[0].id === manufacturerId &&
                             <Product key={index}>
                                 <Product.Picture>
