@@ -33,8 +33,8 @@ export const Picture = styled.div`
     overflow: visible;
 
     img {
-        width: 200px;
-        height: auto;
+        width: auto;
+        height: 200px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 `;
