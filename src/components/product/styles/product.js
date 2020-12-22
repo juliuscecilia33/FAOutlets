@@ -34,7 +34,9 @@ export const Picture = styled.div`
 
     img {
         width: auto;
-        height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        height: auto;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 `;
@@ -45,6 +47,7 @@ export const Title = styled.h2`
     font-weight: bold;
     font-size: 30px;
     color: #FFFFFF;
+    text-align: center;
 `;
 
 export const Description = styled.p`
