@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.button`
+export const Container = styled.div`
     position: relative;
     width: 300px;
     height: 284px;
