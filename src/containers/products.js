@@ -8,8 +8,6 @@ export function ProductsContainer({ products, match }) {
     } = match;
     
     const productFilter = products.filter((product) => product.categories[0].id === manufacturerId)
-    
-    console.log(productFilter);
 
     return (
         <>

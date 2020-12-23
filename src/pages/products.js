@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Title } from '../components';
 import { HeaderContainer, ProductsContainer } from '../containers';
+import { ProductsContext } from '../context/products';
 
 export default function Products({ products, match }) {
+    const { categoryData } = useContext(ProductsContext);
+
     return (
         <>
             <HeaderContainer />
             <Title>
-                <Title.Text>Enjoy Life Foods</Title.Text>
-                <Title.Description>Allergy-free bagels, snack bars, cookies, cereals, granola and chocolate.</Title.Description>
+                <Title.Text>{categoryData.name}</Title.Text>
+                <Title.Description>{categoryData.description}</Title.Description>
             </Title>
             <ProductsContainer products={products} match={match} />
         </>

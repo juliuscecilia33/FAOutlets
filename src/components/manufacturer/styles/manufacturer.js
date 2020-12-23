@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
+export const Container = styled.button`
     position: relative;
     width: 300px;
     height: 284px;
@@ -11,7 +11,8 @@ export const Container = styled.div`
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
-    padding: 1.5rem 1.5rem;
+    padding: 2rem 1.5rem;
+    ${'' /* padding-left: 1.5rem; */}
     text-align: left;
     cursor: pointer;
 `;
