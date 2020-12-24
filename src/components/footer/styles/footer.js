@@ -1,10 +1,11 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.div`
-    height: 20vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     overflow: visible;
 `;
 
@@ -39,13 +40,14 @@ export const Icon = styled.div`
 
     i {
         font-size: 50px;
-        color: ##FFFFFF;
+        color: #FFFFFF;
     }
 `;
 
 export const Bottom = styled.div`
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 60%;
     background-color: #2D3142;
     display: flex;
     flex-direction: column;
