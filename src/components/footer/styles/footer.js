@@ -64,7 +64,7 @@ export const Links = styled.div`
 `;
 
 export const Link = styled.a`
-    font-size: 24px;
+    font-size: 1.0416666666666667vw;
     font-weight: 700;
     color: #FFFFFF;
     outline: none;
@@ -72,10 +72,11 @@ export const Link = styled.a`
 `;
 
 export const TextPrint = styled.p`
+    position: absolute;
+    bottom: 4%;
     font-size: 18px;
     font-weight: 700;
     color: #FFFFFF;
-    justify-content: flex-end;
 
     span {
         color: #EF8354;
