@@ -10,6 +10,8 @@ export default function App() {
   const [ categories, setCategories ] = useState([]);
   const [ categoryData, setCategoryData ] = useState(null);
 
+  console.log(commerce);
+
   const fetchCategories = async () => {
     const { data } = await commerce.categories.list();
 
@@ -19,7 +21,7 @@ export default function App() {
   }
 
   const fetchProducts = async () => {
-    const { data } = await commerce.products.list();
+    const { data } = await commerce.products.list({ limit: 200 });
 
     setProducts(data);
     
