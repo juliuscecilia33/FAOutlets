@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Icons = styled.div`
     position: absolute;
     top: -23%;
-    width: 45%;
+    width: 40%;
     height: 100px;
     display: flex;
     justify-content: space-around;
