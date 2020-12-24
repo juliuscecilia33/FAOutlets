@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Title } from '../components';
-import { HeaderContainer, ProductsContainer } from '../containers';
+import { FooterContainer, HeaderContainer, ProductsContainer } from '../containers';
 import { ProductsContext } from '../context/products';
 
 export default function Products({ products, match }) {
@@ -14,6 +14,7 @@ export default function Products({ products, match }) {
                 <Title.Description>{categoryData.description}</Title.Description>
             </Title>
             <ProductsContainer products={products} match={match} />
+            <FooterContainer />
         </>
     )
 }

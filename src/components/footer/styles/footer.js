@@ -9,15 +9,6 @@ export const Container = styled.div`
     overflow: visible;
 `;
 
-// export const Top = styled.div`
-//     width: 100%;
-//     height: 15%;
-//     background: #c4c4c4;
-//     display: flex;
-//     justify-content: center;
-//     overflow: visible;
-// `;
-
 export const Icons = styled.div`
     position: absolute;
     top: -23%;
@@ -29,8 +20,8 @@ export const Icons = styled.div`
 `;
 
 export const Icon = styled.div`
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #4F5D75;
     border-radius: 10px;
     display: flex;
@@ -38,7 +29,7 @@ export const Icon = styled.div`
     align-items: center;
 
     i {
-        font-size: 50px;
+        font-size: 30px;
         color: #FFFFFF;
     }
 `;

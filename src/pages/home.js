@@ -1,11 +1,12 @@
 import React from 'react'
-import { HeaderContainer } from '../containers/header';
+import { HeaderContainer, FooterContainer } from '../containers';
 
 export default function Home() {
     return (
         <>
-            <HeaderContainer></HeaderContainer>
+            <HeaderContainer />
             <h1>Home Page</h1>
+            <FooterContainer />
         </>
     )
 }

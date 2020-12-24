@@ -1,5 +1,6 @@
 import React from 'react';
 import { Footer } from '../components';
+import * as ROUTES from '../constants/routes';
 
 export function FooterContainer() {
     return (
@@ -13,10 +14,10 @@ export function FooterContainer() {
                     <Footer.Icon><i class="fab fa-linkedin-in"></i></Footer.Icon>
                 </Footer.Icons>
                 <Footer.Links>
-                    <Footer.Link>Home</Footer.Link>
-                    <Footer.Link>Shop</Footer.Link>
-                    <Footer.Link>News</Footer.Link>
-                    <Footer.Link>Contact</Footer.Link>
+                    <Footer.Link to={ROUTES.HOME}>Home</Footer.Link>
+                    <Footer.Link to={ROUTES.MANUFACTURERS}>Shop</Footer.Link>
+                    <Footer.Link to={ROUTES.NEWS}>News</Footer.Link>
+                    <Footer.Link to={ROUTES.CONTACT}>Contact</Footer.Link>
                 </Footer.Links>
                 <Footer.TextPrint />
             </Footer.Bottom>

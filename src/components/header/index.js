@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-// import FAOutletsLogo from '../../Images/FAOutletsLogo.png';
 
 import { LogoContainer, Container, Logo, Links, Link, Price, Checkout, ShoppingCart, ShoppingBadge } from './styles/header';
 
