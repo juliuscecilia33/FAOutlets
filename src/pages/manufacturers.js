@@ -1,6 +1,6 @@
 import React from 'react';
 import { Title } from '../components';
-import { HeaderContainer, ManufacturersContainer } from '../containers';
+import { HeaderContainer, ManufacturersContainer, FooterContainer } from '../containers';
 import { useRouteMatch } from 'react-router-dom';
 
 
@@ -9,12 +9,13 @@ export default function Manufacturers({ categories, products }) {
 
     return (
         <>
-            <HeaderContainer></HeaderContainer>
+            <HeaderContainer />
             <Title>
                 <Title.Text>Shop</Title.Text>
                 <Title.Description>Allergy-friendly Manufacturers</Title.Description>
             </Title>
             <ManufacturersContainer categories={categories} products={products} path={path}></ManufacturersContainer>
+            <FooterContainer />
         </>
     )
 }
