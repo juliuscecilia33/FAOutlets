@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Top, Icon, Bottom, Links, Link, TextPrint } from './styles/footer';
+import { Container, Top, Icon, Bottom, Links, Link } from './styles/footer';
 
 export default function Footer({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -16,10 +16,6 @@ Footer.Icon = function FooterIcon({ children, ...restProps }) {
 
 Footer.Bottom = function FooterBottom({ children, ...restProps }) {
     return <Bottom {...restProps}>{children}</Bottom>
-}
-
-Footer.Links = function FooterLinks({ children, ...restProps }) {
-    return <Links {...restProps}>{children}</Links>
 }
 
 Footer.Link = function FooterLink({ children, ...restProps }) {
