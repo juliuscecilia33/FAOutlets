@@ -41,12 +41,14 @@ Header.Price = function HeaderPrice({ children, ...restProps }) {
     return <Price {...restProps}>{children}</Price>
 }
 
-Header.ShoppingCart = function HeaderShoppingCart({ children, ...restProps }) {
+Header.ShoppingCart = function HeaderShoppingCart({ to, children, ...restProps }) {
     return (
-        <ShoppingCart {...restProps}>
-            <i class="fas fa-shopping-bag"></i>
-            <ShoppingBadge>{children}</ShoppingBadge>
-        </ShoppingCart>
+        <ReactRouterLink to={to}>
+            <ShoppingCart {...restProps}>
+                <i class="fas fa-shopping-bag"></i>
+                <ShoppingBadge>{children}</ShoppingBadge>
+            </ShoppingCart>
+        </ReactRouterLink>
     )
 }
 

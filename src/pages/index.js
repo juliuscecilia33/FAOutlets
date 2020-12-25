@@ -4,3 +4,4 @@ export { default as Contact } from './contact';
 export { default as News } from './news';
 export { default as Manufacturers } from './manufacturers';
 export { default as Products } from './products';
+export { default as Cart } from './cart';
