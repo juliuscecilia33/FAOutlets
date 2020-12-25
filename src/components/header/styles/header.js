@@ -58,10 +58,12 @@ export const Price = styled.p`
     margin-right: 0.5rem;
 `;
 
-export const ShoppingCart = styled.div`
+export const ShoppingCart = styled.a`
     position: relative;
     width: 50px;
     height: 50px;
+    border: none;
+    outline: none;
     border-radius: 50%;
     background-color: #EF8354;
     display: flex;

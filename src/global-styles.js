@@ -36,6 +36,9 @@ export const GlobalStyles = createGlobalStyle `
     }
 
     a {
+        border: none;
+        background: none;
+        outline: none;
         margin: 0;
         padding: 0;
         text-decoration: none;
