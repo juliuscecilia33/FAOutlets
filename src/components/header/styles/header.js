@@ -59,6 +59,7 @@ export const Price = styled.p`
 `;
 
 export const ShoppingCart = styled.div`
+    position: relative;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -66,6 +67,7 @@ export const ShoppingCart = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
 
     i {
         color: #FFFFFF;
@@ -87,5 +89,17 @@ export const Checkout = styled.div`
 `;
 
 export const ShoppingBadge = styled.div`
-
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4F5D75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
 `;
