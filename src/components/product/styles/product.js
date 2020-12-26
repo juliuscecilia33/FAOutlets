@@ -86,14 +86,16 @@ export const Price = styled.h3`
     color: #FFFFFF;
 `;
 
-export const CartContainer = styled.div`
+export const CartContainer = styled.button`
     width: 53px;
     height: 53px;
     background: #EF8354;
     border-radius: 50%;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     button {
         background: none;

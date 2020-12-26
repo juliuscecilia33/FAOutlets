@@ -32,8 +32,8 @@ Product.CartPrice = function ProductCartPrice({ productId, onAddToCart, children
             <PriceContainer>
                 <Price>{children}</Price>
             </PriceContainer>
-            <CartContainer>
-                <button onClick={() => onAddToCart(productId, 1)}><i class="fas fa-shopping-bag"></i></button>
+            <CartContainer onClick={() => onAddToCart(productId, 1)}>
+                <i class="fas fa-shopping-bag"></i>
             </CartContainer>
         </CartPrice>
     )
