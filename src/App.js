@@ -35,7 +35,9 @@ export default function App() {
   }
 
   const fetchCart = async () => {
-    setCart(await commerce.cart.retrieve());
+
+    await commerce.cart.retrieve().then((cart) => setCart(cart));
+
   }
 
   const handleAddToCart = async (productId, quantity) => {
@@ -90,8 +92,8 @@ export default function App() {
   return (
     <ProductsContext.Provider value={{ categoryData, setCategoryData }}>
       <Router>
-        <HeaderContainer />
-        
+        <HeaderContainer totalItems={cart.total_items} />
+
         <Switch>
 
           <Route path={ROUTES.HOME} exact>
@@ -115,7 +117,7 @@ export default function App() {
           </Route>
 
           <Route path="/manufacturers/:manufacturerId" render={({match}) => (
-            <Products products={products} match={match} />
+            <Products products={products} match={match} onAddToCart={handleAddToCart} />
           )}/>
 
           <Route path={ROUTES.CART} exact>

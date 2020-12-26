@@ -2,7 +2,9 @@ import React from 'react';
 import { Header } from '../components';
 import * as ROUTES from '../constants/routes';
 
-export function HeaderContainer() {
+export function HeaderContainer({ totalItems }) {
+    // console.log(totalItems);
+
     return (
         <Header>
             <Header.LogoContainer>

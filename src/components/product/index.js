@@ -26,14 +26,14 @@ Product.Description = function ProductDescription({ children, ...restProps }) {
     return <Description {...restProps}>{children}</Description>
 }
 
-Product.CartPrice = function ProductCartPrice({ children, ...restProps }) {
+Product.CartPrice = function ProductCartPrice({ productId, onAddToCart, children, ...restProps }) {
     return (
         <CartPrice {...restProps}>
             <PriceContainer>
                 <Price>{children}</Price>
             </PriceContainer>
             <CartContainer>
-                <a href="/"><i class="fas fa-shopping-bag"></i></a>
+                <button onClick={() => onAddToCart(productId, 1)}><i class="fas fa-shopping-bag"></i></button>
             </CartContainer>
         </CartPrice>
     )

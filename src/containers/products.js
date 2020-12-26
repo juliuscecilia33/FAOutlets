@@ -1,7 +1,7 @@
 import React from 'react';
 import { Product } from '../components';
 
-export function ProductsContainer({ products, match }) {
+export function ProductsContainer({ products, match, onAddToCart }) {
   
     const {
         params: { manufacturerId }
@@ -20,7 +20,7 @@ export function ProductsContainer({ products, match }) {
                             </Product.Picture>
                             <Product.Title>{product.name}</Product.Title>
                             <Product.Description>{product.description.slice(0, -4).substring(3, )}</Product.Description>
-                            <Product.CartPrice>{product.price.formatted_with_symbol}</Product.CartPrice>
+                            <Product.CartPrice productId={product.id} onAddToCart={onAddToCart}>{product.price.formatted_with_symbol}</Product.CartPrice>
                         </Product>
                     ))
                 }
@@ -34,7 +34,7 @@ export function ProductsContainer({ products, match }) {
                             </Product.Picture>
                             <Product.Title>{product.name}</Product.Title>
                             <Product.Description>{product.description.slice(0, -4).substring(3, )}</Product.Description>
-                            <Product.CartPrice>{product.price.formatted_with_symbol}</Product.CartPrice>
+                            <Product.CartPrice productId={product.id} onAddToCart={onAddToCart}>{product.price.formatted_with_symbol}</Product.CartPrice>
                         </Product>
                     ))
                 }

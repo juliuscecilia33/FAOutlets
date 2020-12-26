@@ -95,7 +95,11 @@ export const CartContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    a {
+    button {
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
         
         i {
             font-size: 20px;
