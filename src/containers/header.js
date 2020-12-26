@@ -17,7 +17,7 @@ export function HeaderContainer({ totalItems }) {
                 <Header.Link to={ROUTES.CONTACT}>Contact</Header.Link>
             </Header.Links>
             <Header.Checkout>
-                <Header.ShoppingCart to={ROUTES.CART}>3</Header.ShoppingCart>
+                <Header.ShoppingCart to={ROUTES.CART}>{totalItems}</Header.ShoppingCart>
             </Header.Checkout>
         </Header>
     )

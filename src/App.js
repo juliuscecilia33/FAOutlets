@@ -36,7 +36,7 @@ export default function App() {
 
   const fetchCart = async () => {
 
-    await commerce.cart.retrieve().then((cart) => setCart(cart));
+    setCart(await commerce.cart.retrieve());
 
   }
 
