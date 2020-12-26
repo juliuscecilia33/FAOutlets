@@ -104,9 +104,6 @@ export default function App() {
             <Contact />
           </Route>
 
-          <Route path={ROUTES.CHECKOUT} exact>
-            <Checkout />
-          </Route>
 
           <Route path={ROUTES.NEWS} exact>
             <News />
@@ -121,9 +118,19 @@ export default function App() {
           )}/>
 
           <Route path={ROUTES.CART} exact>
-            <Cart />
+            <Cart 
+              cart={cart} 
+              handleUpdateCartQty={handleUpdateCartQty}
+              handleRemoveFromCart={handleRemoveFromCart}
+              handleEmptyCart={handleEmptyCart}
+            />
           </Route>
 
+          <Route path={ROUTES.CHECKOUT} exact>
+            <Checkout 
+              cart={cart}
+            />
+          </Route>
         </Switch>
 
         <FooterContainer />
