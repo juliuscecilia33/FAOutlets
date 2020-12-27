@@ -26,7 +26,7 @@ Cart.Name = function CartName({ children, ...restProps }) {
     return (
         <Name {...restProps}>
             <h3>{children}</h3>
-            <i class="fas fa-trash"></i>
+            <button><i class="fas fa-trash"></i></button>
         </Name>
     )
 }

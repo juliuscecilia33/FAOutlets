@@ -102,6 +102,11 @@ export const ShoppingBadge = styled.div`
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 0.8vw;
     font-weight: 700;
+
+    @media (max-width: 1400px) {
+        width: 20px;
+        height: 20px;
+    }
 `;

@@ -2,6 +2,7 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
     width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +11,7 @@ export const Container = styled.div`
 
 export const Item = styled.div`
     width: 100%;
-    height: 136px;
+    height: 14.73142112125163vh;
     background: #2D3142;
     border: 4px solid #EF8354;
     border-radius: 50px;
@@ -18,7 +19,7 @@ export const Item = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 2.5rem;
 `;
 
 export const Picture = styled.div`
@@ -31,14 +32,26 @@ export const Picture = styled.div`
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     overflow: visible;
+
+    @media (max-width: 1400px) {
+        width: 115px;
+        height: 77px;
+    }
     
 
     img {
         width: auto;
-        max-width: 125px;
-        max-height: 125px;
+        max-width: 120px;
+        max-height: 120px;
         height: auto;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        @media (max-width: 1400px) {
+            width: auto;
+            max-width: 110px;
+            max-height: 110px;
+            height: auto;
+        }
     }
 `;
 
@@ -55,17 +68,25 @@ export const Name = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0.5rem;
 
     h3 {
         font-style: italic;
         font-weight: bold;
-        font-size: 36px;
+        font-size: 2vw;
         color: #FFFFFC;
         margin-right: 1rem;
     }
 
+    button {
+        outline: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
     i {
-        font-size: 20px;
+        font-size: 1.1020833333333333vw;
         color: #4F5D75;
     }
 `;
@@ -74,6 +95,12 @@ export const Quantity = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        color: #BFC0C0;
+    }
 `;
 
 export const Update = styled.button`
@@ -87,9 +114,15 @@ export const Update = styled.button`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-right: 0.7rem;
+
+    @media (max-width: 1400px) {
+        width: 20px;
+        height: 20px;
+    }
 
     i {
-        font-size: 13px;
+        font-size: 0.7463541666666666vw;
         color: #FFFFFC;
     }
 `;
@@ -101,23 +134,34 @@ export const Price = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+
+    @media (max-width: 1400px) {
+        width: 102px;
+        height: 32px;
+    }
 
     h3 {
         color: #FFFFFC;
-        font-size: 24px;
+        font-size: 1.1625vw;
         font-weight: 700;
     }
 `;
 
-export const EmptyCart = styled.h3`
-    font-size: 24px;
+export const EmptyCart = styled.button`
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1vw;
     font-weight: 500;
     color: #BFC0C0;
+    cursor: pointer;
+    margin-bottom: 2rem;
 `;
 
 export const Bottom = styled.div`
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,12 +170,13 @@ export const Bottom = styled.div`
 
 export const Subtotal = styled.h2`
     font-family: Yeseva One;
-    font-size: 48px;
+    font-size: 2.5vw;
+    margin-bottom: 1rem;
 `;
 
 export const Checkout = styled.button`
-    width: 264px;
-    height: 57px;
+    width: 260px;
+    height: 53px;
     border-radius: 10px;
     background-color: #EF8354;
     border: none;
@@ -140,4 +185,9 @@ export const Checkout = styled.button`
     justify-content: center;
     align-items: center;
     color: #FFFFFC;
+
+    @media (max-width: 1400px) {
+        width: 240px;
+        height: 43px;
+    }
 `;
