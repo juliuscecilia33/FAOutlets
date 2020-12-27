@@ -92,23 +92,18 @@ export const CartContainer = styled.button`
     background: #EF8354;
     border-radius: 50%;
     border: none;
+    outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    button {
-        background: none;
-        outline: none;
-        border: none;
-        cursor: pointer;
         
-        i {
-            font-size: 20px;
-            margin: 0;
-            padding: 0;
-            color: #FFFFFF;
-        }
+    i {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        color: #FFFFFF;
     }
+    
 
 `;
