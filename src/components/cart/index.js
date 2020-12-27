@@ -31,7 +31,7 @@ Cart.Name = function CartName({ children, ...restProps }) {
     )
 }
 
-Cart.Quantity = function CartQuantity({ quantity, children, ...restProps }) {
+Cart.Quantity = function CartQuantity({ children, ...restProps }) {
     return (
         <Quantity {...restProps}>
             <Update>
@@ -40,7 +40,7 @@ Cart.Quantity = function CartQuantity({ quantity, children, ...restProps }) {
             <Update>
                 <i class="fas fa-plus"></i>
             </Update>
-            <p>Quantity: {quantity}</p>
+            <p>Quantity: {children}</p>
         </Quantity>
     )
 }
@@ -54,7 +54,7 @@ Cart.Price = function CartPrice({ children, ...restProps }) {
 }
 
 Cart.EmptyCart = function CartEmptyCart({ children, ...restProps }) {
-    return <EmptyCart {...restProps}>{children}</EmptyCart>
+    return <EmptyCart {...restProps}>Empty Cart</EmptyCart>
 }
 
 Cart.Bottom = function CartBottom({ children, ...restProps }) {
@@ -62,7 +62,7 @@ Cart.Bottom = function CartBottom({ children, ...restProps }) {
 }
 
 Cart.Subtotal = function CartSubtotal({ children, ...restProps }) {
-    return <Subtotal {...restProps}>Subtotal: ${children}</Subtotal>
+    return <Subtotal {...restProps}>Subtotal: {children}</Subtotal>
 }
 
 Cart.Checkout = function CartCheckout({ children, ...restProps }) {
