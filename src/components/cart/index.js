@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Item, Picture, Center, Name, Quantity, Remove, Update, Price, EmptyCart, Subtotal, Checkout } from './styles/cart';
+import { Container, Item, Picture, Center, Name, Quantity,  Update, Price, EmptyCart, Subtotal, Checkout, Bottom } from './styles/cart';
 
 export default function Cart({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -34,9 +34,9 @@ Cart.Name = function CartName({ children, ...restProps }) {
 Cart.Quantity = function CartQuantity({ quantity, children, ...restProps }) {
     return (
         <Quantity {...restProps}>
-            <Remove>
+            <Update>
                 <i class="fas fa-minus"></i>
-            </Remove>
+            </Update>
             <Update>
                 <i class="fas fa-plus"></i>
             </Update>
@@ -57,8 +57,12 @@ Cart.EmptyCart = function CartEmptyCart({ children, ...restProps }) {
     return <EmptyCart {...restProps}>{children}</EmptyCart>
 }
 
+Cart.Bottom = function CartBottom({ children, ...restProps }) {
+    return <Bottom {...restProps}>{children}</Bottom>
+}
+
 Cart.Subtotal = function CartSubtotal({ children, ...restProps }) {
-    return <Subtotal {...restProps}>{children}</Subtotal>
+    return <Subtotal {...restProps}>Subtotal: ${children}</Subtotal>
 }
 
 Cart.Checkout = function CartCheckout({ children, ...restProps }) {
