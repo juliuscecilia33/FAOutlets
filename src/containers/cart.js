@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cart } from '../components';
+import * as ROUTES from '../constants/routes';
 
 export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) {
     return (
@@ -22,7 +23,7 @@ export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart,
                 <Cart.Subtotal>
                     {cart.subtotal.formatted_with_symbol}
                 </Cart.Subtotal>
-                <Cart.Checkout />
+                <Cart.Checkout to={ROUTES.CHECKOUT} />
             </Cart.Bottom>
         </Cart>
     )

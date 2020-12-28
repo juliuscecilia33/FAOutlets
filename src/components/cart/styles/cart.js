@@ -174,7 +174,7 @@ export const Subtotal = styled.h2`
     margin-bottom: 1rem;
 `;
 
-export const Checkout = styled.button`
+export const Checkout = styled.a`
     width: 260px;
     height: 53px;
     border-radius: 10px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 import { Container, Item, Picture, Center, Name, Quantity,  Update, Price, EmptyCart, Subtotal, Checkout, Bottom } from './styles/cart';
 
@@ -65,6 +66,10 @@ Cart.Subtotal = function CartSubtotal({ children, ...restProps }) {
     return <Subtotal {...restProps}>Subtotal: {children}</Subtotal>
 }
 
-Cart.Checkout = function CartCheckout({ children, ...restProps }) {
-    return <Checkout {...restProps}>Checkout</Checkout>
+Cart.Checkout = function CartCheckout({ to, ...restProps }) {
+    return (
+        <ReactRouterLink to={to}>
+            <Checkout {...restProps}>Checkout</Checkout>
+        </ReactRouterLink>
+    )
 }
