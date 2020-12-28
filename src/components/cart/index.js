@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-import { Container, Item, Picture, Center, Name, Quantity,  Update, Price, EmptyCart, Subtotal, Checkout, Bottom } from './styles/cart';
+import { Container, Item, Picture, Center, Name, Quantity,  Update, Price, EmptyCart, Subtotal, Checkout, Bottom, EmptyMessage, EmptyLink } from './styles/cart';
 
 export default function Cart({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -71,5 +71,16 @@ Cart.Checkout = function CartCheckout({ to, ...restProps }) {
         <ReactRouterLink to={to}>
             <Checkout {...restProps}>Checkout</Checkout>
         </ReactRouterLink>
+    )
+}
+
+Cart.EmptyMessage = function CartEmptyMessage({ to, children, ...restProps }) {
+    return (
+        <EmptyMessage {...restProps}>
+            <h3>You have no items in your shopping cart!</h3>
+            <ReactRouterLink to={to}>
+                <EmptyLink {...restProps}>Start Adding some</EmptyLink>
+            </ReactRouterLink>
+        </EmptyMessage>
     )
 }

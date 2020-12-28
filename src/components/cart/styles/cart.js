@@ -191,3 +191,37 @@ export const Checkout = styled.a`
         height: 43px;
     }
 `;
+
+export const EmptyMessage = styled.div`
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000000;
+        margin-bottom: 1rem;
+    }
+`;
+
+export const EmptyLink = styled.a`
+    width: 280px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #EF8354;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFC;
+
+    @media (max-width: 1400px) {
+        width: 250px;
+        height: 43px;
+    }
+`;
