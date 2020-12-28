@@ -54,8 +54,8 @@ Cart.Price = function CartPrice({ children, ...restProps }) {
     )
 }
 
-Cart.EmptyCart = function CartEmptyCart({ children, ...restProps }) {
-    return <EmptyCart {...restProps}>Empty Cart</EmptyCart>
+Cart.EmptyCart = function CartEmptyCart({ onClick, children, ...restProps }) {
+    return <EmptyCart onClick={onClick} {...restProps}>Empty Cart</EmptyCart>
 }
 
 Cart.Bottom = function CartBottom({ children, ...restProps }) {

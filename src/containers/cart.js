@@ -18,7 +18,7 @@ export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart,
                     </Cart.Item>
                 </>
             ))}
-            <Cart.EmptyCart />
+            <Cart.EmptyCart onClick={handleEmptyCart} />
             <Cart.Bottom>
                 <Cart.Subtotal>
                     {cart.subtotal.formatted_with_symbol}
