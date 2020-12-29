@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
-import { Container, Row, Picture, Title, Description, CartPrice, PriceContainer, Price, CartContainer } from './styles/product';
+import { Container, Row, Picture, Title, Description, CartPrice, PriceContainer, Price, CartContainer, Error, Link } from './styles/product';
 
 export default function Product({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -36,5 +37,18 @@ Product.CartPrice = function ProductCartPrice({ productId, onAddToCart, children
                 <i class="fas fa-shopping-bag"></i>
             </CartContainer>
         </CartPrice>
+    )
+}
+
+Product.Error = function ProductError({ to, children, ...restProps }) {
+    return (
+        <Error {...restProps}>
+            <h3>Uh oh...Something went wrong</h3>
+            <ReactRouterLink to={to}>
+                <Link>
+                    Return Home
+                </Link>
+            </ReactRouterLink>
+        </Error>
     )
 }

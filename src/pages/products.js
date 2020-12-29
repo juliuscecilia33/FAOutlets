@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Title } from '../components';
 import { ProductsContainer } from '../containers';
 import { ProductsContext } from '../context/products';
+import { Product } from '../components';
+import * as ROUTES from '../constants/routes';
 
 export default function Products({ products, match, onAddToCart }) {
     
@@ -19,7 +21,7 @@ export default function Products({ products, match, onAddToCart }) {
                         <ProductsContainer products={products} match={match} onAddToCart={onAddToCart} />
                     </>
                 :
-                    <h3>Something went wrong.</h3>
+                    <Product.Error to={ROUTES.HOME} />
             }
         </>
 

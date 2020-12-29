@@ -107,3 +107,39 @@ export const CartContainer = styled.button`
     
 
 `;
+
+export const Error = styled.div`
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        color: #000000;
+        margin-bottom: 2rem;
+    }
+`;
+
+export const Link = styled.a`
+    width: 260px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #EF8354;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFC;
+
+    @media (max-width: 1400px) {
+        width: 240px;
+        height: 43px;
+    }
+`;
