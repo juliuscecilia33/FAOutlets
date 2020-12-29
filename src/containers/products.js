@@ -6,6 +6,8 @@ export function ProductsContainer({ products, match, onAddToCart }) {
     const {
         params: { manufacturerId }
     } = match;
+
+    if (!products) return 'Loading';
     
     const productFilter = products.filter((product) => product.categories[0].id === manufacturerId)
 
