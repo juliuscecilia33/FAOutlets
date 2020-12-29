@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-import { Container, Item, Picture, Center, Name, Quantity,  Update, Price, EmptyCart, Subtotal, Checkout, Bottom, EmptyMessage, EmptyLink } from './styles/cart';
+import { Container, Item, Picture, Center, Name, Quantity,  Update, Price, EmptyCart, Subtotal, Checkout, Bottom, EmptyMessage, EmptyLink, QuantityText } from './styles/cart';
 
 export default function Cart({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -33,17 +33,15 @@ Cart.Name = function CartName({ children, ...restProps }) {
 }
 
 Cart.Quantity = function CartQuantity({ children, ...restProps }) {
-    return (
-        <Quantity {...restProps}>
-            <Update>
-                <i class="fas fa-minus"></i>
-            </Update>
-            <Update>
-                <i class="fas fa-plus"></i>
-            </Update>
-            <p>Quantity: {children}</p>
-        </Quantity>
-    )
+    return <Quantity {...restProps}>{children}</Quantity>
+}
+
+Cart.Update = function CartUpdate({ children, ...restProps }) {
+    return <Update {...restProps}>{children}</Update>
+}
+
+Cart.QuantityText = function CartQuantityText({ children, ...restProps }) {
+    return <QuantityText {...restProps}>{children}</QuantityText>
 }
 
 Cart.Price = function CartPrice({ children, ...restProps }) {

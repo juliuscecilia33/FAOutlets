@@ -95,12 +95,12 @@ export const Quantity = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
 
-    p {
-        font-size: 18px;
-        font-weight: 500;
-        color: #BFC0C0;
-    }
+export const QuantityText = styled.p`
+    font-size: 18px;
+    font-weight: 500;
+    color: #BFC0C0;
 `;
 
 export const Update = styled.button`

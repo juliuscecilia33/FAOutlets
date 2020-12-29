@@ -19,7 +19,11 @@ export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart,
                                 <Cart.Picture src={item.media.source} />
                                 <Cart.Center>
                                     <Cart.Name>{item.name}</Cart.Name>
-                                    <Cart.Quantity>&nbsp;{item.quantity}&nbsp;</Cart.Quantity>
+                                    <Cart.Quantity>
+                                        <Cart.Update><i class="fas fa-minus"></i></Cart.Update>
+                                        <Cart.Update><i class="fas fa-plus"></i></Cart.Update>
+                                        <Cart.QuantityText>Quantity: &nbsp;{item.quantity}&nbsp;</Cart.QuantityText>
+                                    </Cart.Quantity>
                                 </Cart.Center>
                                 <Cart.Price>{item.line_total.formatted_with_symbol}</Cart.Price>
                             </Cart.Item>
