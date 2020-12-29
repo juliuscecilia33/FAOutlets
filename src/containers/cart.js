@@ -20,8 +20,8 @@ export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart,
                                 <Cart.Center>
                                     <Cart.Name>{item.name}</Cart.Name>
                                     <Cart.Quantity>
-                                        <Cart.Update><i class="fas fa-minus"></i></Cart.Update>
-                                        <Cart.Update><i class="fas fa-plus"></i></Cart.Update>
+                                        <Cart.Update onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}><i class="fas fa-minus"></i></Cart.Update>
+                                        <Cart.Update onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}><i class="fas fa-plus"></i></Cart.Update>
                                         <Cart.QuantityText>Quantity: &nbsp;{item.quantity}&nbsp;</Cart.QuantityText>
                                     </Cart.Quantity>
                                 </Cart.Center>
