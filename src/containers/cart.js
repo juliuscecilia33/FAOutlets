@@ -13,8 +13,8 @@ export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart,
                 ? 
                     <Cart.EmptyMessage to={ROUTES.MANUFACTURERS} /> 
                 : 
-                    cart.line_items.map((item) => (
-                        <>
+                    <>
+                        {cart.line_items.map((item) => (
                             <Cart.Item>
                                 <Cart.Picture src={item.media.source} />
                                 <Cart.Center>
@@ -23,16 +23,16 @@ export function CartContainer({ cart, handleUpdateCartQty, handleRemoveFromCart,
                                 </Cart.Center>
                                 <Cart.Price>{item.line_total.formatted_with_symbol}</Cart.Price>
                             </Cart.Item>
-                        </>
-                    ))
+                        ))}
+                        <Cart.EmptyCart onClick={handleEmptyCart} />
+                        <Cart.Bottom>
+                            <Cart.Subtotal>
+                                {cart.subtotal.formatted_with_symbol}
+                            </Cart.Subtotal>
+                            <Cart.Checkout to={ROUTES.CHECKOUT} />
+                        </Cart.Bottom>
+                    </>
             }
-            <Cart.EmptyCart onClick={handleEmptyCart} />
-            <Cart.Bottom>
-                <Cart.Subtotal>
-                    {cart.subtotal.formatted_with_symbol}
-                </Cart.Subtotal>
-                <Cart.Checkout to={ROUTES.CHECKOUT} />
-            </Cart.Bottom>
         </Cart>
     )
 }
