@@ -8,8 +8,12 @@ export default function Checkout({ cart, order, onCaptureCheckout, error }) {
     const [checkoutToken, setCheckoutToken] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
     const [shippingData, setShippingData] = useState({});
-    const classes = useStyles();
+    // const classes = useStyles();
     const history = useHistory();
+
+    const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
+
 
     return (
         <>
