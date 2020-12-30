@@ -73,9 +73,10 @@ export const Name = styled.div`
     h3 {
         font-style: italic;
         font-weight: bold;
-        font-size: 2vw;
+        font-size: 1.8vw;
         color: #FFFFFC;
         margin-right: 1rem;
+        text-align: center;
     }
 
     button {

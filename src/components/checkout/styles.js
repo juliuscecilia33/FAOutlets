@@ -1,6 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  palette: {
+    primary: {
+      main: '#EF8354',
+    },
+  },
   appBar: {
     position: 'relative',
   },

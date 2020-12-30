@@ -53,7 +53,7 @@ export function PaymentFormContainer({ checkoutToken, nextStep, backStep, shippi
             <br /> <br />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Button variant="outlined" onClick={backStep}>Back</Button>
-              <Button type="submit" variant="contained" disabled={!stripe} color="primary">
+              <Button type="submit" variant="contained" disabled={!stripe} color="EF8354">
                 Pay {checkoutToken.live.subtotal.formatted_with_symbol}
               </Button>
             </div>
