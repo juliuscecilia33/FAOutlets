@@ -77,7 +77,7 @@ export default function App() {
           setOrder(incomingOrder);
           refreshCart();
       } catch (error) {
-          setErrorMessage(error.data.error.message);
+          refreshCart();
       }
   }
 
@@ -86,8 +86,6 @@ export default function App() {
     fetchProducts();
     fetchCart();
   }, []);
-
-  console.log(cart);
 
   return (
     <ProductsContext.Provider value={{ categoryData, setCategoryData }}>
