@@ -130,6 +130,9 @@ export default function App() {
           <Route path={ROUTES.CHECKOUT} exact>
             <Checkout 
               cart={cart}
+              order={order}
+              onCaptureCheckout={handleCaptureCheckout}
+              error={errorMessage}
             />
           </Route>
         </Switch>
