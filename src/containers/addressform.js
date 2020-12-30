@@ -98,6 +98,6 @@ export function AddressFormContainer({ checkoutToken, test }) {
                 </div>
                 </form>
             </FormProvider>
-            </>
+        </>
     )
 }
