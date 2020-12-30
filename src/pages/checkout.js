@@ -73,7 +73,7 @@ export default function Checkout({ cart, order, onCaptureCheckout, error }) {
     return (
         <>
             <CssBaseline />
-            <HeaderContainer />
+            {/* <HeaderContainer /> */}
             <main className={classes.layout}>
                 <Paper className={classes.paper}>
                 <Typography variant="h4" align="center">Checkout</Typography>
