@@ -64,7 +64,7 @@ export default function Checkout({ cart, order, onCaptureCheckout, error }) {
                     <Divider className={classes.divider} />
                 </div>
                 <br />
-                <Button component={Link} to="/" variant="outlined" type="button">Back to Home</Button>
+                <Button component={Link} to="/" variant="outlined" type="button" className={classes.root}>Back to Home</Button>
             </>
         ) : (
             <div className={classes.spinner}>
@@ -85,9 +85,11 @@ export default function Checkout({ cart, order, onCaptureCheckout, error }) {
                     <Typography variant="h4" align="center">Checkout</Typography>
                     <Stepper activeStep={activeStep} className={classes.stepper}>
                         {steps.map((label) => (
-                        <Step key={label}>
-                            <StepLabel>{label}</StepLabel>
-                        </Step>
+                            <Step key={label}>
+                                <StepLabel StepIconProps={{
+                                    classes: { root: classes.stepIcon }
+                                }}>{label}</StepLabel>
+                            </Step>
                         ))}
                     </Stepper>
                     {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form />}

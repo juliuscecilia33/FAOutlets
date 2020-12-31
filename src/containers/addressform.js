@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { commerce } from '../lib/commerce';
 import { FormInputContainer as FormInput } from './formInput';
+import useStyles from '../components/checkout/styles';
 
 export function AddressFormContainer({ checkoutToken, next }) {
     const [shippingCountries, setShippingCountries] = useState([]);
@@ -13,6 +14,7 @@ export function AddressFormContainer({ checkoutToken, next }) {
     const [shippingSubdivision, setShippingSubdivision] = useState('');
     const [shippingOptions, setShippingOptions] = useState([]);
     const [shippingOption, setShippingOption] = useState('');
+    const classes = useStyles();
     const methods = useForm();
   
     const fetchShippingCountries = async (checkoutTokenId) => {
@@ -49,14 +51,18 @@ export function AddressFormContainer({ checkoutToken, next }) {
     }, [shippingSubdivision]);
 
     const buttonStyle = {
-        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+        background: '#EF8354',
         borderRadius: 3,
         border: 0,
         color: 'white',
         height: 48,
         padding: '0 30px',
-        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+        boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.25)',
     };
+
+    const inputStyle ={
+        background: "#EF8354"
+    }
   
     return (
       <>
@@ -64,14 +70,14 @@ export function AddressFormContainer({ checkoutToken, next }) {
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubdivision, shippingOption }))}>
             <Grid container spacing={3}>
-              <FormInput required name="firstName" label="First name" />
+              <FormInput style={inputStyle} required name="firstName" label="First name" />
               <FormInput required name="lastName" label="Last name" />
               <FormInput required name="address1" label="Address line 1" />
               <FormInput required name="email" label="Email" />
               <FormInput required name="city" label="City" />
               <FormInput required name="zip" label="Zip / Postal code" />
               <Grid item xs={12} sm={6}>
-                <InputLabel>Shipping Country</InputLabel>
+                <InputLabel >Shipping Country</InputLabel>
                 <Select value={shippingCountry} fullWidth onChange={(e) => setShippingCountry(e.target.value)}>
                   {Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name })).map((item) => (
                     <MenuItem key={item.id} value={item.id}>
@@ -104,7 +110,7 @@ export function AddressFormContainer({ checkoutToken, next }) {
             <br />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Button component={Link} variant="outlined" to="/cart">Back to Cart</Button>
-              <Button type="submit" variant="contained" style={buttonStyle}>Next</Button>
+              <Button type="submit" variant="contained" className={classes.root}>Next</Button>
             </div>
           </form>
         </FormProvider>
