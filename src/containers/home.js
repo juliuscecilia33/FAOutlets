@@ -42,7 +42,7 @@ export function HomeContainer() {
             <Home.ProductsContainer>
                 <Home.TitleContainer alignItems="flex-start">
                     <Home.Title textAlign="left" color="#000000">Select Products from that Manufacturer.</Home.Title>
-                    <Home.Button background="#EF8354" />
+                    <Home.Button to={ROUTES.MANUFACTURERS} background="#EF8354" />
                 </Home.TitleContainer>
                 <Home.ImageContainer justifyContent="flex-end" src="Products" />
             </Home.ProductsContainer>

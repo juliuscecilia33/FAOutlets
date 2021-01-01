@@ -66,6 +66,11 @@ export const Button = styled.a`
     justify-content: space-around;
     align-items: center;
     padding: 0 1rem;
+
+    i {
+        color: #FFFFFC;
+        font-size: 22px;
+    }
 `;
 
 export const LogosContainer = styled.div`
