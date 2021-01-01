@@ -21,7 +21,7 @@ export const ImageContainer = styled.div`
     width: 80%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: ${({ justifyContent }) => justifyContent};
     align-items: center;
 
     img {
@@ -44,7 +44,8 @@ export const Title = styled.h1`
     font-family: Yeseva One;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 54px;
+    text-align: ${({ textAlign }) => textAlign};
     color: ${({ color }) => color};
 `;
 

@@ -11,9 +11,9 @@ Home.Hero = function HomeHero({ children, ...restProps }) {
     return <Hero {...restProps}>{children}</Hero>
 }
 
-Home.ImageContainer = function HomeImageContainer({ src, children, ...restProps }) {
+Home.ImageContainer = function HomeImageContainer({ justifyContent, src, children, ...restProps }) {
     return (
-        <ImageContainer {...restProps}>
+        <ImageContainer {...restProps} justifyContent={justifyContent}>
             <img src={`/images/${src}.png`} alt="Home Display" />
         </ImageContainer>
     )
@@ -25,8 +25,8 @@ Home.TitleContainer = function HomeTitleContainer({ children, ...restProps }) {
     )
 }
 
-Home.Title = function HomeTitle({ color, children, ...restProps }) {
-    return <Title {...restProps} color={color}>{children}</Title>
+Home.Title = function HomeTitle({ textAlign, color, children, ...restProps }) {
+    return <Title {...restProps} textAlign={textAlign} color={color}>{children}</Title>
 }
 
 Home.Button = function HomeButton({ to, background, children, ...restProps }) {
