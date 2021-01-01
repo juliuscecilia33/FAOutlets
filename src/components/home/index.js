@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import Foods from '/images/Foods.png';
 
-import { Container, Hero, ImageContainer, TitleContainer, Title, Button, LogosContainer } from './styles/home';
+import { Container, Hero, ImageContainer, TitleContainer, Title, Button, LogosContainer, LogoRow, Logo } from './styles/home';
 
 export default function Home({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -41,4 +41,16 @@ Home.Button = function HomeButton({ backGround, children, ...restProps }) {
 
 Home.LogosContainer = function HomeLogosContainer({ children, ...restProps }) {
     return <LogosContainer {...restProps}>{children}</LogosContainer>
+}
+
+Home.LogoRow = function HomeLogoRow({ children, ...restProps }) {
+    return <LogoRow {...restProps}>{children}</LogoRow>
+}
+
+Home.Logo = function HomeLogo({ src, children, ...restProps }) {
+    return (
+        <Logo {...restProps}>
+            <img src={`/images/${src}logo.png`} alt="Manufacturer Logo" />
+        </Logo>
+    )
 }
