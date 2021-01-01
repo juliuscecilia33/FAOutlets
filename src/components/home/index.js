@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import Foods from '/images/Foods.png';
 
-import { Container, Hero, ImageContainer, TitleContainer, Title, Button, LogosContainer, LogoRow, Logo } from './styles/home';
+import { Container, Hero, ImageContainer, TitleContainer, Title, Button, LogosContainer, LogoRow, Logo, ManufacturerContainer } from './styles/home';
 
 export default function Home({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -12,10 +11,10 @@ Home.Hero = function HomeHero({ children, ...restProps }) {
     return <Hero {...restProps}>{children}</Hero>
 }
 
-Home.ImageContainer = function HomeImageContainer({ children, ...restProps }) {
+Home.ImageContainer = function HomeImageContainer({ src, children, ...restProps }) {
     return (
         <ImageContainer {...restProps}>
-            <img src={Foods} alt="Foods" />
+            <img src={src} alt="Home Display" />
         </ImageContainer>
     )
 }
@@ -30,12 +29,14 @@ Home.Title = function HomeTitle({ children, ...restProps }) {
     return <Title {...restProps}>{children}</Title>
 }
 
-Home.Button = function HomeButton({ backGround, children, ...restProps }) {
+Home.Button = function HomeButton({ to, backGround, children, ...restProps }) {
     return (
-        <Button {...restProps} backGround={backGround}>
-            <p>Shop Now</p>
-            <i class="fas fa-shopping-bag"></i>
-        </Button>
+        <ReactRouterLink to={to}>
+            <Button {...restProps} backGround={backGround}>
+                <p>Shop Now</p>
+                <i class="fas fa-shopping-bag"></i>
+            </Button>
+        </ReactRouterLink>
     )
 }
 
@@ -53,4 +54,8 @@ Home.Logo = function HomeLogo({ src, children, ...restProps }) {
             <img src={`/images/${src}logo.png`} alt="Manufacturer Logo" />
         </Logo>
     )
+}
+
+Home.ManufacturerContainer = function HomeManufacturerContainer({ children, ...restProps }) {
+    return <ManufacturerContainer {...restProps}>{children}</ManufacturerContainer>
 }
