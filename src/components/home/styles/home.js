@@ -6,6 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: none;
 `;
 
 export const Hero = styled.div`
@@ -15,27 +16,29 @@ export const Hero = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;
 `;
 
 export const ImageContainer = styled.div`
-    width: 80%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: ${({ justifyContent }) => justifyContent};
     align-items: center;
 
     img {
-        max-width: 90%;
+        max-width: 85%;
         height: auto;
     }
 `;
 
 export const TitleContainer = styled.div`
-    width: 20%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: ${({ alignItems }) => alignItems};
     padding: 0 1rem;
 `;
 
@@ -47,14 +50,15 @@ export const Title = styled.h1`
     font-size: 54px;
     text-align: ${({ textAlign }) => textAlign};
     color: ${({ color }) => color};
+    margin-bottom: 1rem;
 `;
 
 export const Button = styled.a`
     margin: none;
     outline: none;
     border: none;
-    width: 232px;
-    height: 59px;
+    width: 200px;
+    height: 53px;
     border-radius: 20px;
     background: ${({ background }) => background};
     color: #FFFFFC;
@@ -72,6 +76,7 @@ export const LogosContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;
 `;
 
 export const LogoRow = styled.div`
@@ -97,6 +102,7 @@ export const ManufacturerContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;
 `;
 
 export const ProductsContainer = styled.div`
@@ -106,6 +112,7 @@ export const ProductsContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;
 `;
 
 export const PaymentsContainer = styled.div`
@@ -115,4 +122,5 @@ export const PaymentsContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;
 `;

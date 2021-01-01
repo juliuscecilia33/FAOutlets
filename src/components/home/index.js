@@ -19,9 +19,9 @@ Home.ImageContainer = function HomeImageContainer({ justifyContent, src, childre
     )
 }
 
-Home.TitleContainer = function HomeTitleContainer({ children, ...restProps }) {
+Home.TitleContainer = function HomeTitleContainer({ alignItems, children, ...restProps }) {
     return (
-        <TitleContainer {...restProps}>{children}</TitleContainer>
+        <TitleContainer {...restProps} alignItems={alignItems}>{children}</TitleContainer>
     )
 }
 

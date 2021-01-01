@@ -6,7 +6,7 @@ export function HomeContainer() {
     return (
         <Home>
             <Home.Hero>
-                <Home.TitleContainer>
+                <Home.TitleContainer alignItems="flex-start">
                     <Home.Title textAlign="left" color="#FFFFFC">Select Allergy-<br/>Friendly Foods in an Easy Way.</Home.Title>
                     <Home.Button to={ROUTES.MANUFACTURERS} background="#2D3142" />
                 </Home.TitleContainer>
@@ -33,14 +33,14 @@ export function HomeContainer() {
 
             <Home.ManufacturerContainer>
                 <Home.ImageContainer justifyContent="flex-start" src="Manufacturers" />
-                <Home.TitleContainer>
+                <Home.TitleContainer alignItems="flex-end">
                     <Home.Title textAlign="right" color="#FFFFFC">Choose your favorite Manufacturer.</Home.Title>
                     <Home.Button to={ROUTES.MANUFACTURERS} background="#EF8354" />
                 </Home.TitleContainer>
             </Home.ManufacturerContainer>
 
             <Home.ProductsContainer>
-                <Home.TitleContainer>
+                <Home.TitleContainer alignItems="flex-start">
                     <Home.Title textAlign="left" color="#000000">Select Products from that Manufacturer.</Home.Title>
                     <Home.Button background="#EF8354" />
                 </Home.TitleContainer>
@@ -49,7 +49,7 @@ export function HomeContainer() {
 
             <Home.PaymentsContainer>
                 <Home.ImageContainer justifyContent="flex-start" src="Payments" />
-                <Home.TitleContainer>
+                <Home.TitleContainer alignItems="flex-end">
                     <Home.Title textAlign="right" color="#FFFFFC">Payments powered by Stripe.</Home.Title>
                 </Home.TitleContainer>
             </Home.PaymentsContainer>
