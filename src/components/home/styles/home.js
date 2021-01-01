@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Hero = styled.div`
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     background: #EF8354;
     display: flex;
     justify-content: center;
@@ -65,7 +65,7 @@ export const Button = styled.a`
 
 export const LogosContainer = styled.div`
     width: 100%;
-    height: 35vh;
+    height: 45vh;
     background: #FFFFFC;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ export const Logo = styled.div`
 
 export const ManufacturerContainer = styled.div`
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     background: #2D3142;
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@ export const ManufacturerContainer = styled.div`
 
 export const ProductsContainer = styled.div`
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     background: #FFFFFC;
     display: flex;
     justify-content: center;
@@ -109,7 +109,7 @@ export const ProductsContainer = styled.div`
 
 export const PaymentsContainer = styled.div`
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     background: #4F5D75;
     display: flex;
     justify-content: center;

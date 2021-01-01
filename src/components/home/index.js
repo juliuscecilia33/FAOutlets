@@ -51,7 +51,7 @@ Home.LogoRow = function HomeLogoRow({ children, ...restProps }) {
 Home.Logo = function HomeLogo({ src, children, ...restProps }) {
     return (
         <Logo {...restProps}>
-            <img src={`/images/${src}logo.png`} alt="Manufacturer Logo" />
+            <img src={`/images/${src}Logo.png`} alt="Manufacturer Logo" />
         </Logo>
     )
 }

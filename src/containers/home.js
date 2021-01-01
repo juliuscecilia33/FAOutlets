@@ -42,7 +42,7 @@ export function HomeContainer() {
             <Home.ProductsContainer>
                 <Home.TitleContainer>
                     <Home.Title color="#000000">Select Products from that Manufacturer.</Home.Title>
-                    <Home.Button background="EF8354" />
+                    <Home.Button background="#EF8354" />
                 </Home.TitleContainer>
                 <Home.ImageContainer src="Products" />
             </Home.ProductsContainer>
