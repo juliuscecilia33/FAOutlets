@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-import { Container, Hero, ImageContainer, TitleContainer, Title, Button, LogosContainer, LogoRow, Logo, ManufacturerContainer, ProductsContainer } from './styles/home';
+import { Container, Hero, ImageContainer, TitleContainer, Title, Button, LogosContainer, LogoRow, Logo, ManufacturerContainer, ProductsContainer, PaymentsContainer } from './styles/home';
 
 export default function Home({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -62,4 +62,8 @@ Home.ManufacturerContainer = function HomeManufacturerContainer({ children, ...r
 
 Home.ProductsContainer = function HomeProductsContainer({ children, ...restProps }) {
     return <ProductsContainer {...restProps}>{children}</ProductsContainer>
+}
+
+Home.PaymentsContainer = function HomePaymentsContainer({ children, ...restProps }) {
+    return <PaymentsContainer {...restProps}>{children}</PaymentsContainer>
 }
