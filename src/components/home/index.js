@@ -14,7 +14,7 @@ Home.Hero = function HomeHero({ children, ...restProps }) {
 Home.ImageContainer = function HomeImageContainer({ src, children, ...restProps }) {
     return (
         <ImageContainer {...restProps}>
-            <img src={src} alt="Home Display" />
+            <img src={`/images/${src}.png`} alt="Home Display" />
         </ImageContainer>
     )
 }

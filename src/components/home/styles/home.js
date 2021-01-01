@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const Hero = styled.div`
     width: 100%;
     height: 45vh;
+    background: #EF8354;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +45,7 @@ export const Title = styled.h1`
     font-style: normal;
     font-weight: normal;
     font-size: 64px;
-    color: #FFFFFC;
+    color: ${({ color }) => color};
 `;
 
 export const Button = styled.a`
@@ -55,7 +56,7 @@ export const Button = styled.a`
     height: 59px;
     border-radius: 20px;
     background: ${({ background }) => background};
-    color: white;
+    color: #FFFFFC;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -65,6 +66,7 @@ export const Button = styled.a`
 export const LogosContainer = styled.div`
     width: 100%;
     height: 35vh;
+    background: #FFFFFC;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,6 +92,7 @@ export const Logo = styled.div`
 export const ManufacturerContainer = styled.div`
     width: 100%;
     height: 45vh;
+    background: #2D3142;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +101,7 @@ export const ManufacturerContainer = styled.div`
 export const ProductsContainer = styled.div`
     width: 100%;
     height: 45vh;
+    background: #FFFFFC;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +110,7 @@ export const ProductsContainer = styled.div`
 export const PaymentsContainer = styled.div`
     width: 100%;
     height: 45vh;
+    background: #4F5D75;
     display: flex;
     justify-content: center;
     align-items: center;

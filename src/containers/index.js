@@ -6,3 +6,4 @@ export { CartContainer } from './cart';
 export { AddressFormContainer } from './addressform';
 export { PaymentFormContainer } from './paymentform';
 export { ReviewContainer } from './review';
+export { HomeContainer } from './home';
