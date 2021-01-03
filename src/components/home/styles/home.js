@@ -43,11 +43,10 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: 64px;
     font-family: Yeseva One;
     font-style: normal;
     font-weight: normal;
-    font-size: 54px;
+    font-size: 3.5vw;
     text-align: ${({ textAlign }) => textAlign};
     color: ${({ color }) => color};
     margin-bottom: 1rem;
@@ -67,9 +66,14 @@ export const Button = styled.a`
     align-items: center;
     padding: 0 1rem;
 
+    @media (max-width: 1400px) {
+        width: 150px;
+        height: 43px;
+    }
+
     i {
         color: #FFFFFC;
-        font-size: 22px;
+        font-size: 1.3vw;
     }
 `;
 
@@ -95,7 +99,7 @@ export const LogoRow = styled.div`
 export const Logo = styled.div`
 
     img {
-        width: 130px;
+        width: 8.4vw;
         height: auto;
     }
 `;

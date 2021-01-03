@@ -29,8 +29,13 @@ export const Icon = styled.div`
     align-items: center;
 
     i {
-        font-size: 30px;
+        font-size: 1.9vw;
         color: #FFFFFF;
+    }
+
+    @media (max-width: 1400px) {
+        width: 60px;
+        height: 60px;
     }
 `;
 
@@ -64,7 +69,7 @@ export const Link = styled.a`
 export const TextPrint = styled.p`
     position: absolute;
     bottom: 4%;
-    font-size: 18px;
+    font-size: 1.17vw;
     font-weight: 700;
     color: #FFFFFF;
 
