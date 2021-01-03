@@ -2,8 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle `
     html {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     *, *:before, *:after {
