@@ -38,17 +38,22 @@ export const Links = styled.div`
     width: 70%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding: 0 15%;
 `;
 
 export const Link = styled.a`
     font-size: 1.1029166666666667vw;
     font-weight: 600;
     color: #2D3142;
-    margin-right: 3rem;
     text-decoration: none;
     cursor: pointer;
+    transition: .5s ease all;
+
+    &:hover, &:active, &:focus {
+        color: #EF8354;
+    }
 `;
 
 export const Price = styled.p`
