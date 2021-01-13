@@ -5,8 +5,10 @@ import {
   Section,
   Title,
   Description,
-  FormInput,
+  Form,
+  FormBox,
   Input,
+  Label,
   Submit,
   Image,
   SubSection,
@@ -32,21 +34,16 @@ Contact.Description = function ContactDescription({ children, ...restProps }) {
   return <Description {...restProps}>{children}</Description>;
 };
 
-Contact.FormInput = function ContactFormInput({ children, ...restProps }) {
-  return <FormInput {...restProps}>{children}</FormInput>;
+Contact.Form = function ContactForm({ children, ...restProps }) {
+  return <Form {...restProps}>{children}</Form>;
 };
 
-Contact.Input = function ContactInput({
-  type,
-  name,
-  id,
-  children,
-  ...restProps
-}) {
+Contact.FormBox = function ContactFormBox({ type, children, ...restProps }) {
   return (
-    <Input placeholder=" " autocomplete="off" required {...restProps}>
-      <label for={id}>{children}</label>
-    </Input>
+    <FormBox {...restProps}>
+      <input type={type} name="" autocomplete="off" required {...restProps} />
+      <label>{children}</label>
+    </FormBox>
   );
 };
 
