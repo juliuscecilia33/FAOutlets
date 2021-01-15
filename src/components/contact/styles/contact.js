@@ -12,10 +12,14 @@ export const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 3rem;
+
+  @media (max-width: 1400px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const Title = styled.h1`
-  font-size: 96px;
+  font-size: 5.5vw;
   color: #2d3142;
   font-family: Yeseva One;
   text-align: left;
@@ -24,13 +28,13 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 28px;
+  font-size: 1.2vw;
   font-family: Roboto;
   color: #2d3142;
   font-weight: 500;
   text-align: left;
   width: 40%;
-  line-height: 33px;
+  line-height: 3vh;
   margin-bottom: 3rem;
 `;
 
@@ -47,7 +51,7 @@ export const FormBox = styled.div`
   input {
     width: 80%;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 1vw;
     color: #bfc0c0;
     margin-bottom: 30px;
     border: none;
@@ -62,7 +66,7 @@ export const FormBox = styled.div`
     top: 0;
     left: 0;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 1vw;
     color: #bfc0c0;
     pointer-events: none;
     transition: ease all 0.5s;
@@ -73,7 +77,7 @@ export const FormBox = styled.div`
     top: -20px;
     left: 0;
     color: #ef8354;
-    font-size: 12px;
+    font-size: 0.75vw;
   }
 
   input:focus,
@@ -90,11 +94,16 @@ export const Submit = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   color: #fffffc;
-  font-size: 24px;
+  font-size: 1.3vw;
   font-weight: 700;
   border: none;
   outline: none;
   cursor: pointer;
+
+  @media (max-width: 1400px) {
+    width: 236px;
+    height: 51px;
+  }
 `;
 
 export const Image = styled.div`
@@ -105,7 +114,7 @@ export const Image = styled.div`
   margin-bottom: 3rem;
 
   img {
-    width: 780px;
+    width: 46vw;
     height: auto;
   }
 `;
@@ -122,13 +131,13 @@ export const Support = styled.div`
 
   h2 {
     font-family: Yeseva One;
-    font-size: 48px;
+    font-size: 3vw;
     color: #2d3142;
     margin-bottom: 1.5rem;
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.2vw;
     font-weight: 500;
     color: #2d3142;
     margin-bottom: 1rem;
@@ -141,7 +150,7 @@ export const Companies = styled.div`
   flex-direction: column;
 
   h2 {
-    font-size: 48px;
+    font-size: 3vw;
     font-family: Yeseva One;
     color: #2d3142;
     margin-bottom: 1.5rem;
@@ -159,13 +168,13 @@ export const Column = styled.div`
   width: 50%;
 
   p {
-    font-size: 18px;
+    font-size: 1.1vw;
     font-weight: 500;
     color: #2d3142;
     margin-bottom: 1.3rem;
 
     i {
-      font-size: 14px;
+      font-size: 0.9vw;
       color: #ef8354;
       cursor: pointer;
     }
