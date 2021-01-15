@@ -38,7 +38,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 `;
 
 export const FormBox = styled.div`
@@ -54,6 +54,7 @@ export const FormBox = styled.div`
     border-bottom: 2px solid #bfc0c0;
     outline: none;
     background: transparent;
+    transition: ease all 0.5s;
   }
 
   label {
@@ -64,7 +65,7 @@ export const FormBox = styled.div`
     font-size: 16px;
     color: #bfc0c0;
     pointer-events: none;
-    transition: 0.5s;
+    transition: ease all 0.5s;
   }
 
   input:focus ~ label,
@@ -73,6 +74,12 @@ export const FormBox = styled.div`
     left: 0;
     color: #ef8354;
     font-size: 12px;
+  }
+
+  input:focus,
+  input:valid {
+    border-bottom: 2px solid #ef8354;
+    color: #2d3142;
   }
 `;
 
