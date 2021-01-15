@@ -7,11 +7,9 @@ import {
   Description,
   Form,
   FormBox,
-  Input,
-  Label,
   Submit,
   Image,
-  SubSection,
+  // SubSection,
   Support,
   Companies,
   Column,
@@ -63,9 +61,9 @@ Contact.Image = function ContactImage({ src, children, ...restProps }) {
   );
 };
 
-Contact.SubSection = function ContactSubSection({ children, ...restProps }) {
-  return <SubSection {...restProps}>{children}</SubSection>;
-};
+// Contact.SubSection = function ContactSubSection({ children, ...restProps }) {
+//   return <SubSection {...restProps}>{children}</SubSection>;
+// };
 
 Contact.Support = function ContactSupport({ children, ...restProps }) {
   return (
