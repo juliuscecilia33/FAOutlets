@@ -13,10 +13,15 @@ export function ContactContainer() {
           <Contact.FormBox type="text">name</Contact.FormBox>
           <Contact.FormBox type="email">email address</Contact.FormBox>
           <Contact.FormBox type="text">description</Contact.FormBox>
+          <Contact.Submit />
         </Contact.Form>
       </Contact.Section>
 
-      <Contact.Section></Contact.Section>
+      <Contact.Section>
+        <Contact.Image src="Foods" />
+        <Contact.Support />
+        <Contact.Companies />
+      </Contact.Section>
     </Contact>
   );
 }
