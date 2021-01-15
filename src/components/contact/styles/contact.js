@@ -11,7 +11,7 @@ export const Section = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 0 3rem;
 `;
 
 export const Title = styled.h1`
@@ -20,6 +20,7 @@ export const Title = styled.h1`
   font-family: Yeseva One;
   text-align: left;
   width: 75%;
+  margin-bottom: 2rem;
 `;
 
 export const Description = styled.p`
@@ -28,20 +29,24 @@ export const Description = styled.p`
   color: #2d3142;
   font-weight: 500;
   text-align: left;
-  width: 60%;
+  width: 40%;
+  line-height: 33px;
+  margin-bottom: 3rem;
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease;
 `;
 
 export const FormBox = styled.div`
   position: relative;
 
   input {
-    width: 100%;
-    padding: 10px;
+    width: 80%;
+    padding: 10px 0;
     font-size: 16px;
     color: #bfc0c0;
     margin-bottom: 30px;
@@ -59,7 +64,7 @@ export const FormBox = styled.div`
     font-size: 16px;
     color: #bfc0c0;
     pointer-events: none;
-    transition: 0.5s ease all;
+    transition: 0.5s;
   }
 
   input:focus ~ label,
@@ -74,12 +79,15 @@ export const FormBox = styled.div`
 export const Submit = styled.button`
   width: 264px;
   height: 57px;
-  color: #ef8354;
+  background: #ef8354;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   color: #fffffc;
   font-size: 24px;
   font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
 `;
 
 export const Image = styled.div`
@@ -87,6 +95,7 @@ export const Image = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 
   img {
     width: 780px;
@@ -94,11 +103,10 @@ export const Image = styled.div`
   }
 `;
 
-// export const SubSection = styled.div`
-//   width: 50%;
-//   display: flex;
-//   flex-direction: column;
-// `;
+export const SubSection = styled.div`
+  width: 100%;
+  display: flex;
+`;
 
 export const Support = styled.div`
   width: 50%;
@@ -109,12 +117,14 @@ export const Support = styled.div`
     font-family: Yeseva One;
     font-size: 48px;
     color: #2d3142;
+    margin-bottom: 1.5rem;
   }
 
   p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: #2d3142;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -127,6 +137,7 @@ export const Companies = styled.div`
     font-size: 48px;
     font-family: Yeseva One;
     color: #2d3142;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -144,10 +155,12 @@ export const Column = styled.div`
     font-size: 18px;
     font-weight: 500;
     color: #2d3142;
+    margin-bottom: 1.3rem;
 
     i {
       font-size: 14px;
       color: #ef8354;
+      cursor: pointer;
     }
   }
 `;
