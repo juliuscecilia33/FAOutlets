@@ -24,13 +24,27 @@ export const Icon = styled.button`
   }
 
   div {
+    z-index: 100;
     width: 2rem;
     height: 0.25rem;
-    background: yellow;
+    background: ${({ open }) => (open ? "black" : "yellow")};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+  }
+
+  :first-child {
+    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+  }
+
+  :nth-child(2) {
+    opacity: ${({ open }) => (open ? "0" : "1")};
+    transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+  }
+
+  :nth-child(3) {
+    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
   }
 `;
 
@@ -38,14 +52,14 @@ export const Menu = styled.nav`
   display: none;
   flex-direction: column;
   justify-content: center;
-  background: blue;
+  background: white;
   height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
   top: 0;
   left: 0;
-  ${"" /* transform: translateX(-100%); */}
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 576px) {

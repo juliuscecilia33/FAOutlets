@@ -2,9 +2,9 @@ import React from "react";
 
 import { Icon, Menu } from "./styles/burger";
 
-export default function Burger({ children, ...restProps }) {
+export default function Burger({ open, setOpen, children, ...restProps }) {
   return (
-    <Icon {...restProps}>
+    <Icon open={open} onClick={() => setOpen(!open)} {...restProps}>
       <div />
       <div />
       <div />
@@ -12,9 +12,9 @@ export default function Burger({ children, ...restProps }) {
   );
 }
 
-Burger.Menu = function BurgerMenu({ children, ...restProps }) {
+Burger.Menu = function BurgerMenu({ open, children, ...restProps }) {
   return (
-    <Menu>
+    <Menu open={open} {...restProps}>
       <a href="/">About us</a>
       <a href="/">Pricing</a>
       <a href="/">Contact</a>
