@@ -35,6 +35,11 @@ export const Logo = styled.button`
   img {
     width: 7.3046875vw;
     height: auto;
+
+    @media (max-width: 950px) {
+      width: 100px;
+      height: auto;
+    }
   }
 `;
 
@@ -59,6 +64,10 @@ export const Link = styled.a`
   &:active,
   &:focus {
     color: #ef8354;
+  }
+
+  @media (max-width: 1050px) {
+    font-size: 1rem;
   }
 `;
 
