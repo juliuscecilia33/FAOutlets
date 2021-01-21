@@ -17,11 +17,16 @@ export const Hero = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const ImageContainer = styled.div`
   width: 70%;
-  height: 100%;
+  height: 50%;
   display: flex;
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: center;
@@ -29,17 +34,28 @@ export const ImageContainer = styled.div`
   img {
     max-width: 85%;
     height: auto;
+
+    @media (max-width: 750px) {
+      max-width: 100%;
+      height: auto;
+    }
   }
 `;
 
 export const TitleContainer = styled.div`
   width: 30%;
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: ${({ alignItems }) => alignItems};
   padding: 0 1rem;
+
+  @media (max-width: 750px) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -50,6 +66,11 @@ export const Title = styled.h1`
   text-align: ${({ textAlign }) => textAlign};
   color: ${({ color }) => color};
   margin-bottom: 1rem;
+
+  @media (max-width: 750px) {
+    text-align: center;
+    font-size: 2rem;
+  }
 `;
 
 export const Button = styled.a`
@@ -119,6 +140,11 @@ export const ManufacturerContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const ProductsContainer = styled.div`
@@ -129,6 +155,11 @@ export const ProductsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const PaymentsContainer = styled.div`
@@ -139,4 +170,9 @@ export const PaymentsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
