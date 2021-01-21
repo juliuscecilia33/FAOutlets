@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Icon = styled.button`
   position: absolute;
   top: 5%;
-  left: 2rem;
+  right: 2rem;
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -14,6 +14,7 @@ export const Icon = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  overflow: hidden;
 
   @media (max-width: 576px) {
     display: flex;
@@ -27,7 +28,7 @@ export const Icon = styled.button`
     z-index: 100;
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "black" : "yellow")};
+    background: ${({ open }) => (open ? "black" : "#fffffc")};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -59,8 +60,9 @@ export const Menu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.3s ease-in-out;
+  overflow: hidden;
 
   @media (max-width: 576px) {
     display: flex;
