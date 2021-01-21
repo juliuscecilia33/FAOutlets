@@ -1,0 +1,75 @@
+import styled from "styled-components";
+
+export const Icon = styled.button`
+  position: absolute;
+  top: 5%;
+  left: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  @media (max-width: 576px) {
+    display: flex;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: yellow;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+`;
+
+export const Menu = styled.nav`
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: blue;
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  ${"" /* transform: translateX(-100%); */}
+  transition: transform 0.3s ease-in-out;
+
+  @media (max-width: 576px) {
+    display: flex;
+    width: 100%;
+  }
+
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:hover {
+      color: brown;
+    }
+  }
+`;

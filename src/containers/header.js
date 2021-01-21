@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../components";
+import { Header, Burger } from "../components";
 import * as ROUTES from "../constants/routes";
 
 export function HeaderContainer({ totalItems }) {
@@ -9,6 +9,8 @@ export function HeaderContainer({ totalItems }) {
     <Header>
       <Header.LogoContainer>
         <Header.Logo to={ROUTES.HOME} />
+        <Burger />
+        <Burger.Menu />
       </Header.LogoContainer>
       <Header.Links>
         <Header.Link to={ROUTES.HOME}>Home</Header.Link>
