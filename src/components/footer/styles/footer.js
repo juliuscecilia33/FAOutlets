@@ -36,6 +36,10 @@ export const Icon = styled.div`
   @media (max-width: 1400px) {
     width: 60px;
     height: 60px;
+
+    i {
+      font-size: 1.5rem;
+    }
   }
 `;
 

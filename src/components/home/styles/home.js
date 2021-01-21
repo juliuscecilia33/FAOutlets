@@ -65,10 +65,12 @@ export const Button = styled.a`
   justify-content: space-around;
   align-items: center;
   padding: 0 1rem;
+  font-size: 1.2rem;
 
   @media (max-width: 1400px) {
     width: 150px;
     height: 43px;
+    font-size: 1rem;
   }
 
   i {
@@ -79,6 +81,7 @@ export const Button = styled.a`
   @media (max-width: 850px) {
     width: 142px;
     height: 35px;
+    font-size: 0.8rem;
   }
 `;
 

@@ -1,15 +1,12 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
+  position: relative;
   width: 100%;
   height: 8vh;
   display: flex;
   align-items: center;
   padding: 0 1.5rem;
-
-  @media (max-width: 576px) {
-    display: none;
-  }
 `;
 
 export const LogoContainer = styled.div`
@@ -50,6 +47,10 @@ export const Links = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 0 15%;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const Link = styled.a`
@@ -76,6 +77,10 @@ export const Price = styled.p`
   font-weight: 700;
   color: #2d3142;
   margin-right: 0.5rem;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const ShoppingCart = styled.a`
@@ -90,6 +95,10 @@ export const ShoppingCart = styled.a`
   justify-content: center;
   align-items: center;
   overflow: visible;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 
   i {
     color: #ffffff;
@@ -108,6 +117,10 @@ export const Checkout = styled.div`
   align-items: center;
   width: 15%;
   height: 100%;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const ShoppingBadge = styled.div`
@@ -124,6 +137,10 @@ export const ShoppingBadge = styled.div`
   color: #ffffff;
   font-size: 0.8vw;
   font-weight: 700;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 
   @media (max-width: 1400px) {
     width: 20px;

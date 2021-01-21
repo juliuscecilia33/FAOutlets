@@ -11,10 +11,6 @@ export function HeaderContainer({ totalItems }) {
 
   return (
     <>
-      <div ref={node}>
-        <Burger open={open} setOpen={setOpen} />
-        <Burger.Menu open={open} setOpen={setOpen} />
-      </div>
       <Header>
         <Header.LogoContainer>
           <Header.Logo to={ROUTES.HOME} />
@@ -30,6 +26,8 @@ export function HeaderContainer({ totalItems }) {
             {totalItems}
           </Header.ShoppingCart>
         </Header.Checkout>
+        <Burger open={open} setOpen={setOpen} />
+        <Burger.Menu open={open} setOpen={setOpen} />
       </Header>
     </>
   );
