@@ -17,6 +17,10 @@ export const Icons = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 750px) {
+    width: 70%;
+  }
 `;
 
 export const Icon = styled.div`
@@ -60,6 +64,10 @@ export const Links = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 750px) {
+    width: 60%;
+  }
 `;
 
 export const Link = styled.a`
