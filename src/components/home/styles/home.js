@@ -40,6 +40,10 @@ export const ImageContainer = styled.div`
       height: auto;
     }
   }
+
+  @media (max-width: 650px) {
+    width: 95%;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -69,7 +73,12 @@ export const Title = styled.h1`
 
   @media (max-width: 750px) {
     text-align: center;
+    line-height: 40px;
     font-size: 2rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1.8rem;
   }
 `;
 
@@ -97,6 +106,10 @@ export const Button = styled.a`
   i {
     color: #fffffc;
     font-size: 1.3vw;
+
+    @media (max-width: 450px) {
+      font-size: 12px;
+    }
   }
 
   @media (max-width: 850px) {
@@ -115,6 +128,11 @@ export const LogosContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+
+  @media (max-width: 450px) {
+    height: 60vh;
+    flex-direction: row;
+  }
 `;
 
 export const LogoRow = styled.div`
@@ -123,12 +141,25 @@ export const LogoRow = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
 `;
 
 export const Logo = styled.div`
   img {
     width: 8.4vw;
     height: auto;
+  }
+
+  @media (max-width: 450px) {
+    img {
+      width: 3rem;
+      height: auto;
+    }
   }
 `;
 

@@ -7,6 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   overflow: visible;
+
+  @media (max-width: 350px) {
+    height: 60vh;
+  }
 `;
 
 export const Icons = styled.div`
@@ -20,6 +24,14 @@ export const Icons = styled.div`
 
   @media (max-width: 750px) {
     width: 70%;
+  }
+
+  @media (max-width: 550px) {
+    width: 90%;
+  }
+
+  @media (max-width: 350px) {
+    top: -14%;
   }
 `;
 
@@ -45,6 +57,24 @@ export const Icon = styled.div`
       font-size: 1.5rem;
     }
   }
+
+  @media (max-width: 550px) {
+    width: 50px;
+    height: 50px;
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 350px) {
+    width: 45px;
+    height: 45px;
+
+    i {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const Bottom = styled.div`
@@ -68,6 +98,15 @@ export const Links = styled.div`
   @media (max-width: 750px) {
     width: 60%;
   }
+
+  @media (max-width: 450px) {
+    width: 80%;
+  }
+
+  @media (max-width: 350px) {
+    height: 75%;
+    flex-direction: column;
+  }
 `;
 
 export const Link = styled.a`
@@ -76,9 +115,22 @@ export const Link = styled.a`
   color: #ffffff;
   outline: none;
   text-decoration: none;
+  transition: 0.3s ease all;
 
   @media (max-width: 1050px) {
     font-size: 1rem;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    color: #ef8354;
   }
 `;
 
@@ -91,5 +143,13 @@ export const TextPrint = styled.p`
 
   span {
     color: #ef8354;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 0.7rem;
   }
 `;
