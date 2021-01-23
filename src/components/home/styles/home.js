@@ -44,6 +44,10 @@ export const ImageContainer = styled.div`
   @media (max-width: 650px) {
     width: 95%;
   }
+
+  @media (max-width: 305px) {
+    display: none;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -79,6 +83,10 @@ export const Title = styled.h1`
 
   @media (max-width: 550px) {
     font-size: 1.8rem;
+  }
+
+  @media (max-width: 305px) {
+    font-size: 1.4rem;
   }
 `;
 
