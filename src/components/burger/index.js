@@ -1,6 +1,7 @@
 import React from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
 
-import { Icon, Menu } from "./styles/burger";
+import { Icon, Menu, Link } from "./styles/burger";
 
 export default function Burger({ open, setOpen, children, ...restProps }) {
   return (
@@ -15,9 +16,15 @@ export default function Burger({ open, setOpen, children, ...restProps }) {
 Burger.Menu = function BurgerMenu({ open, children, ...restProps }) {
   return (
     <Menu open={open} {...restProps}>
-      <a href="/">About us</a>
-      <a href="/">Pricing</a>
-      <a href="/">Contact</a>
+      {children}
     </Menu>
+  );
+};
+
+Burger.Link = function BurgerLink({ to, children, ...restProps }) {
+  return (
+    <ReactRouterLink to={to}>
+      <Link {...restProps}>{children}</Link>
+    </ReactRouterLink>
   );
 };

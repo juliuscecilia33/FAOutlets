@@ -52,11 +52,11 @@ export const Icon = styled.button`
 export const Menu = styled.nav`
   display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   background: white;
   height: 100vh;
   text-align: center;
-  padding: 2rem;
+  padding: 3.5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -68,24 +68,24 @@ export const Menu = styled.nav`
     display: flex;
     width: 100%;
   }
+`;
 
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s linear;
+export const Link = styled.a`
+  font-size: 2rem;
+  text-transform: uppercase;
+  ${"" /* padding: 2rem 0; */}
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
 
-    @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
+  @media (max-width: 576px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    &:hover {
-      color: brown;
-    }
+  &:hover {
+    color: #ef8354;
   }
 `;

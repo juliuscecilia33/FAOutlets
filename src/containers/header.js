@@ -4,7 +4,7 @@ import { useOnClickOutside } from "../hooks/clickOutside";
 import * as ROUTES from "../constants/routes";
 
 export function HeaderContainer({ totalItems }) {
-  // console.log(totalItems);
+  console.log(totalItems);
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -27,7 +27,13 @@ export function HeaderContainer({ totalItems }) {
           </Header.ShoppingCart>
         </Header.Checkout>
         <Burger open={open} setOpen={setOpen} />
-        <Burger.Menu open={open} setOpen={setOpen} />
+        <Burger.Menu open={open} setOpen={setOpen}>
+          <Burger.Link to={ROUTES.HOME}>Home</Burger.Link>
+          <Burger.Link to={ROUTES.MANUFACTURERS}>Shop</Burger.Link>
+          <Burger.Link to={ROUTES.NEWS}>Initiative</Burger.Link>
+          <Burger.Link to={ROUTES.CONTACT}>Contact</Burger.Link>
+          <Burger.Link to={ROUTES.CART}>Cart: {totalItems}</Burger.Link>
+        </Burger.Menu>
       </Header>
     </>
   );
