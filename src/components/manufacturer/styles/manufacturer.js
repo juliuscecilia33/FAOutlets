@@ -15,6 +15,7 @@ export const Container = styled.div`
   ${"" /* padding-left: 1.5rem; */}
   text-align: left;
   cursor: pointer;
+  margin: 3rem;
 
   @media (max-width: 1600px) {
     width: 250px;
@@ -30,14 +31,32 @@ export const Container = styled.div`
     width: 220px;
     height: 214px;
   }
+
+  @media (max-width: 1200px) {
+    width: 210px;
+    height: 204px;
+  }
+
+  @media (max-width: 1100px) {
+    border-radius: 45px;
+    width: 250px;
+    height: 234px;
+    margin: 1rem;
+  }
 `;
 
 export const Row = styled.div`
-  width: 100%;
-  height: 35vh;
+  width: 90%;
+  ${"" /* height: 75vh; */}
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+
+  @media (max-width: 1100px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Title = styled.h2`
@@ -64,6 +83,16 @@ export const Description = styled.p`
 
   @media (max-width: 1300px) {
     font-size: 0.85rem;
+    line-height: 15px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 0.75rem;
+    line-height: 15px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 0.75rem;
     line-height: 15px;
   }
 `;
@@ -113,6 +142,26 @@ export const LogoPlacement = styled.div`
 
     img {
       width: 40px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    width: 56px;
+    height: 56px;
+
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    img {
+      width: 20px;
       height: auto;
     }
   }
