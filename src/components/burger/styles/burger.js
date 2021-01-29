@@ -13,7 +13,7 @@ export const Icon = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 15;
+  z-index: 10;
   overflow: hidden;
 
   @media (max-width: 750px) {

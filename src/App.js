@@ -109,7 +109,7 @@ export default function App() {
         <HeaderContainer totalItems={cart.total_items} />
 
         <Switch>
-          <React.Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<p>Loading...</p>}>
             <Route path={ROUTES.HOME} exact>
               <Home />
             </Route>
@@ -155,7 +155,7 @@ export default function App() {
                 error={errorMessage}
               />
             </Route>
-          </React.Suspense>
+          </Suspense>
         </Switch>
 
         <Suspense fallback={<div>LOADING</div>}>

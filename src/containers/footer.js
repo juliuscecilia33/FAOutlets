@@ -26,7 +26,7 @@ export default function FooterContainer() {
         <Footer.Links>
           <Footer.Link to={ROUTES.HOME}>Home</Footer.Link>
           <Footer.Link to={ROUTES.MANUFACTURERS}>Shop</Footer.Link>
-          <Footer.Link to={ROUTES.INITIATIVE}>Initiative</Footer.Link>
+          <Footer.Link to={ROUTES.INITIATIVE}>News</Footer.Link>
           <Footer.Link to={ROUTES.CONTACT}>Contact</Footer.Link>
         </Footer.Links>
         <Footer.TextPrint />

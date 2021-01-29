@@ -43,11 +43,6 @@ export const Container = styled.div`
     height: 234px;
     margin: 1rem;
   }
-
-  @media (max-width: 350px) {
-    width: 220px;
-    height: 214px;
-  }
 `;
 
 export const Row = styled.div`
@@ -69,10 +64,6 @@ export const Title = styled.h2`
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 0.7rem;
-
-  @media (max-width: 1050px) {
-    font-size: 1.3rem;
-  }
 `;
 
 export const DescriptionContainer = styled.div`
