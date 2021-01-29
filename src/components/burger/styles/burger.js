@@ -63,6 +63,7 @@ export const Menu = styled.nav`
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
+  z-index: 10;
 
   @media (max-width: 750px) {
     display: flex;
@@ -79,6 +80,7 @@ export const Link = styled.a`
   color: black;
   text-decoration: none;
   transition: all 0.3s ease;
+  z-index: 10;
 
   @media (max-width: 576px) {
     font-size: 1.5rem;

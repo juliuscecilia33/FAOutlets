@@ -15,7 +15,7 @@ export const Container = styled.div`
   ${"" /* padding-left: 1.5rem; */}
   text-align: left;
   cursor: pointer;
-  margin: 3rem;
+  margin: 1rem;
 
   @media (max-width: 1600px) {
     width: 250px;
@@ -39,14 +39,14 @@ export const Container = styled.div`
 
   @media (max-width: 1100px) {
     border-radius: 45px;
-    width: 250px;
+    width: 240px;
     height: 234px;
     margin: 1rem;
   }
 `;
 
 export const Row = styled.div`
-  width: 90%;
+  width: 95%;
   ${"" /* height: 75vh; */}
   display: flex;
   flex-wrap: wrap;

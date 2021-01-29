@@ -21,9 +21,15 @@ Burger.Menu = function BurgerMenu({ open, children, ...restProps }) {
   );
 };
 
-Burger.Link = function BurgerLink({ to, children, ...restProps }) {
+Burger.Link = function BurgerLink({
+  setOpen,
+  open,
+  to,
+  children,
+  ...restProps
+}) {
   return (
-    <ReactRouterLink to={to}>
+    <ReactRouterLink onClick={() => setOpen(!open)} to={to}>
       <Link {...restProps}>{children}</Link>
     </ReactRouterLink>
   );
