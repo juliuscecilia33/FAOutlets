@@ -1,18 +1,27 @@
-import React, { useState, useEffect } from "react";
-import {
-  Home,
-  Contact,
-  Checkout,
-  News,
-  Manufacturers,
-  Products,
-  Cart,
-} from "./pages";
+import React, { useState, useEffect, Suspense, lazy } from "react";
+// import {
+//   Home,
+//   Contact,
+//   Checkout,
+//   Initiative,
+//   Manufacturers,
+//   Products,
+//   Cart,
+// } from "./pages";
 import { commerce } from "./lib/commerce";
 import * as ROUTES from "./constants/routes";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ProductsContext } from "./context/products";
-import { FooterContainer, HeaderContainer } from "./containers";
+import { HeaderContainer } from "./containers";
+
+const FooterContainer = lazy(() => import("./containers/footer"));
+const Home = React.lazy(() => import("./pages/home"));
+const Contact = React.lazy(() => import("./pages/contact"));
+const Checkout = React.lazy(() => import("./pages/checkout"));
+const Initiative = React.lazy(() => import("./pages/initiative"));
+const Manufacturers = React.lazy(() => import("./pages/manufacturers"));
+const Products = React.lazy(() => import("./pages/products"));
+const Cart = React.lazy(() => import("./pages/cart"));
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -100,54 +109,58 @@ export default function App() {
         <HeaderContainer totalItems={cart.total_items} />
 
         <Switch>
-          <Route path={ROUTES.HOME} exact>
-            <Home />
-          </Route>
+          <React.Suspense fallback={<p>Loading...</p>}>
+            <Route path={ROUTES.HOME} exact>
+              <Home />
+            </Route>
 
-          <Route path={ROUTES.CONTACT} exact>
-            <Contact />
-          </Route>
+            <Route path={ROUTES.CONTACT} exact>
+              <Contact />
+            </Route>
 
-          <Route path={ROUTES.NEWS} exact>
-            <News />
-          </Route>
+            <Route path={ROUTES.INITIATIVE} exact>
+              <Initiative />
+            </Route>
 
-          <Route path={ROUTES.MANUFACTURERS} exact>
-            <Manufacturers categories={categories} />
-          </Route>
+            <Route path={ROUTES.MANUFACTURERS} exact>
+              <Manufacturers categories={categories} />
+            </Route>
 
-          <Route
-            path="/manufacturers/:manufacturerId"
-            render={({ match }) => (
-              <Products
-                products={products}
-                match={match}
-                onAddToCart={handleAddToCart}
+            <Route
+              path="/manufacturers/:manufacturerId"
+              render={({ match }) => (
+                <Products
+                  products={products}
+                  match={match}
+                  onAddToCart={handleAddToCart}
+                />
+              )}
+            />
+
+            <Route path={ROUTES.CART} exact>
+              <Cart
+                cart={cart}
+                handleUpdateCartQty={handleUpdateCartQty}
+                handleRemoveFromCart={handleRemoveFromCart}
+                handleEmptyCart={handleEmptyCart}
+                totalItems={cart.total_items}
               />
-            )}
-          />
+            </Route>
 
-          <Route path={ROUTES.CART} exact>
-            <Cart
-              cart={cart}
-              handleUpdateCartQty={handleUpdateCartQty}
-              handleRemoveFromCart={handleRemoveFromCart}
-              handleEmptyCart={handleEmptyCart}
-              totalItems={cart.total_items}
-            />
-          </Route>
-
-          <Route path={ROUTES.CHECKOUT} exact>
-            <Checkout
-              cart={cart}
-              order={order}
-              onCaptureCheckout={handleCaptureCheckout}
-              error={errorMessage}
-            />
-          </Route>
+            <Route path={ROUTES.CHECKOUT} exact>
+              <Checkout
+                cart={cart}
+                order={order}
+                onCaptureCheckout={handleCaptureCheckout}
+                error={errorMessage}
+              />
+            </Route>
+          </React.Suspense>
         </Switch>
 
-        <FooterContainer />
+        <Suspense fallback={<div>LOADING</div>}>
+          <FooterContainer />
+        </Suspense>
       </Router>
     </ProductsContext.Provider>
   );

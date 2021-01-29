@@ -1,10 +1,11 @@
 export { ManufacturersContainer } from "./manufacturers";
 export { HeaderContainer } from "./header";
 export { ProductsContainer } from "./products";
-export { FooterContainer } from "./footer";
+export { default as FooterContainer } from "./footer";
 export { CartContainer } from "./cart";
 export { AddressFormContainer } from "./addressform";
 export { PaymentFormContainer } from "./paymentform";
 export { ReviewContainer } from "./review";
 export { HomeContainer } from "./home";
 export { ContactContainer } from "./contact";
+export { InitiativeContainer } from "./initiative";

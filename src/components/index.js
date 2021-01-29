@@ -7,3 +7,4 @@ export { default as Cart } from "./cart";
 export { default as Home } from "./home";
 export { default as Contact } from "./contact";
 export { default as Burger } from "./burger";
+export { default as Initiative } from "./initiative";

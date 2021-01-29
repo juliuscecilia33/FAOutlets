@@ -1,13 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Header, Burger } from "../components";
-import { useOnClickOutside } from "../hooks/clickOutside";
 import * as ROUTES from "../constants/routes";
 
 export function HeaderContainer({ totalItems }) {
   console.log(totalItems);
   const [open, setOpen] = useState(false);
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <>
@@ -18,7 +15,7 @@ export function HeaderContainer({ totalItems }) {
         <Header.Links>
           <Header.Link to={ROUTES.HOME}>Home</Header.Link>
           <Header.Link to={ROUTES.MANUFACTURERS}>Shop</Header.Link>
-          <Header.Link to={ROUTES.NEWS}>Initiative</Header.Link>
+          <Header.Link to={ROUTES.INITIATIVE}>Initiative</Header.Link>
           <Header.Link to={ROUTES.CONTACT}>Contact</Header.Link>
         </Header.Links>
         <Header.Checkout>
@@ -34,7 +31,7 @@ export function HeaderContainer({ totalItems }) {
           <Burger.Link open={open} setOpen={setOpen} to={ROUTES.MANUFACTURERS}>
             Shop
           </Burger.Link>
-          <Burger.Link open={open} setOpen={setOpen} to={ROUTES.NEWS}>
+          <Burger.Link open={open} setOpen={setOpen} to={ROUTES.INITIATIVE}>
             Initiative
           </Burger.Link>
           <Burger.Link open={open} setOpen={setOpen} to={ROUTES.CONTACT}>
