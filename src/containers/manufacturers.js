@@ -9,6 +9,8 @@ export function ManufacturersContainer({ path, categories }) {
     setCategoryData(category);
   };
 
+  if (!categories) return <div>Loading Manufacturers...</div>;
+
   return (
     <>
       <Manufacturer.Row>

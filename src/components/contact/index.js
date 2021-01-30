@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import {
   Container,
@@ -56,7 +58,11 @@ Contact.Submit = function ContactSubmit({ children, ...restProps }) {
 Contact.Image = function ContactImage({ src, children, ...restProps }) {
   return (
     <Image {...restProps}>
-      <img src={`/images/${src}.png`} alt="Food Display" />
+      <LazyLoadImage
+        src={`/images/${src}.png`}
+        alt="Food Display"
+        effect="blur"
+      />
     </Image>
   );
 };

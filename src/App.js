@@ -1,13 +1,4 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
-// import {
-//   Home,
-//   Contact,
-//   Checkout,
-//   Initiative,
-//   Manufacturers,
-//   Products,
-//   Cart,
-// } from "./pages";
 import { commerce } from "./lib/commerce";
 import * as ROUTES from "./constants/routes";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,13 +6,13 @@ import { ProductsContext } from "./context/products";
 import { HeaderContainer } from "./containers";
 
 const FooterContainer = lazy(() => import("./containers/footer"));
-const Home = React.lazy(() => import("./pages/home"));
-const Contact = React.lazy(() => import("./pages/contact"));
-const Checkout = React.lazy(() => import("./pages/checkout"));
-const Initiative = React.lazy(() => import("./pages/initiative"));
-const Manufacturers = React.lazy(() => import("./pages/manufacturers"));
-const Products = React.lazy(() => import("./pages/products"));
-const Cart = React.lazy(() => import("./pages/cart"));
+const Home = lazy(() => import("./pages/home"));
+const Contact = lazy(() => import("./pages/contact"));
+const Checkout = lazy(() => import("./pages/checkout"));
+const Initiative = lazy(() => import("./pages/initiative"));
+const Manufacturers = lazy(() => import("./pages/manufacturers"));
+const Products = lazy(() => import("./pages/products"));
+const Cart = lazy(() => import("./pages/cart"));
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -109,22 +100,22 @@ export default function App() {
         <HeaderContainer totalItems={cart.total_items} />
 
         <Switch>
-          <Suspense fallback={<p>Loading...</p>}>
-            <Route path={ROUTES.HOME} exact>
-              <Home />
-            </Route>
+          <Suspense fallback={<p>Loading Page...</p>}>
+            <Route path={ROUTES.HOME} exact render={() => <Home />} />
 
-            <Route path={ROUTES.CONTACT} exact>
-              <Contact />
-            </Route>
+            <Route path={ROUTES.CONTACT} exact render={() => <Contact />} />
 
-            <Route path={ROUTES.INITIATIVE} exact>
-              <Initiative />
-            </Route>
+            <Route
+              path={ROUTES.INITIATIVE}
+              exact
+              render={() => <Initiative />}
+            />
 
-            <Route path={ROUTES.MANUFACTURERS} exact>
-              <Manufacturers categories={categories} />
-            </Route>
+            <Route
+              path={ROUTES.MANUFACTURERS}
+              exact
+              render={() => <Manufacturers categories={categories} />}
+            />
 
             <Route
               path="/manufacturers/:manufacturerId"
@@ -158,7 +149,7 @@ export default function App() {
           </Suspense>
         </Switch>
 
-        <Suspense fallback={<div>LOADING</div>}>
+        <Suspense fallback={<div>Loading Footer...</div>}>
           <FooterContainer />
         </Suspense>
       </Router>
