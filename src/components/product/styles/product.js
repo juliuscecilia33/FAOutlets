@@ -11,7 +11,26 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 0 1.3rem;
-  margin: 1.2rem 5rem;
+  margin: 1.4rem 5rem;
+
+  @media (max-width: 1300px) {
+    width: 280px;
+    height: 414px;
+  }
+
+  @media (max-width: 1050px) {
+    margin: 1.2rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 250px;
+    height: 384px;
+  }
+
+  @media (max-width: 650px) {
+    width: 225px;
+    height: 369px;
+  }
 `;
 
 export const Row = styled.div`
@@ -21,6 +40,10 @@ export const Row = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+
+  @media (max-width: 1050px) {
+    width: 90%;
+  }
 `;
 
 export const Picture = styled.div`
@@ -40,6 +63,30 @@ export const Picture = styled.div`
     max-height: 200px;
     height: auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media (max-width: 1300px) {
+      max-width: 175px;
+      max-height: 175px;
+      width: auto;
+      height: auto;
+    }
+
+    @media (max-width: 700px) {
+      max-width: 150px;
+      max-height: 150px;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    width: 200px;
+    height: 134px;
+  }
+
+  @media (max-width: 700px) {
+    width: 180px;
+    height: 124px;
   }
 `;
 
@@ -50,6 +97,14 @@ export const Title = styled.h2`
   font-size: 30px;
   color: #ffffff;
   text-align: center;
+
+  @media (max-width: 1300px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 23px;
+  }
 `;
 
 export const Description = styled.p`
@@ -60,6 +115,14 @@ export const Description = styled.p`
   line-height: 16px;
   text-align: center;
   color: #e5e5e5;
+
+  @media (max-width: 1300px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
 `;
 
 export const CartPrice = styled.div`
@@ -78,6 +141,21 @@ export const PriceContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1300px) {
+    width: 92px;
+    height: 28px;
+  }
+
+  @media (max-width: 700px) {
+    width: 86px;
+    height: 26px;
+  }
+
+  @media (max-width: 650px) {
+    width: 86px;
+    height: 28px;
+  }
 `;
 
 export const Price = styled.h3`
@@ -86,6 +164,18 @@ export const Price = styled.h3`
   font-weight: bold;
   font-size: 20px;
   color: #ffffff;
+
+  @media (max-width: 1300px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
 `;
 
 export const CartContainer = styled.button`
@@ -105,6 +195,24 @@ export const CartContainer = styled.button`
     margin: 0;
     padding: 0;
     color: #ffffff;
+
+    @media (max-width: 1300px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (max-width: 700px) {
+    width: 46px;
+    height: 46px;
   }
 `;
 

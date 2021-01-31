@@ -18,6 +18,10 @@ export const Text = styled.h1`
   @media (max-width: 1300px) {
     font-size: 2rem;
   }
+
+  @media (max-width: 500px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export const Description = styled.div`
@@ -38,7 +42,7 @@ export const DescrText = styled.h3`
     line-height: 22px;
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 400px) {
     font-size: 0.8rem;
     line-height: 15px;
   }
