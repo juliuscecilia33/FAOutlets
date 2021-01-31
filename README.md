@@ -8,13 +8,17 @@ Prototype (Built in Figma)
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/LandingPagePrototype.png)
 <br />
 <br />
+<br />
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/Shop%20Page.png)
+<br />
 <br />
 <br />
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/Product%20Page.png)
 <br />
 <br />
+<br />
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/Cart%20Page.png)
+<br />
 <br />
 <br />
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/Contact%20Page.png)
