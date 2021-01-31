@@ -15,7 +15,7 @@ export const Container = styled.div`
   ${"" /* padding-left: 1.5rem; */}
   text-align: left;
   cursor: pointer;
-  margin: 1rem;
+  margin: 1.8rem 5rem;
 
   @media (max-width: 1600px) {
     width: 250px;
@@ -43,10 +43,15 @@ export const Container = styled.div`
     height: 234px;
     margin: 1rem;
   }
+
+  @media (max-width: 300px) {
+    width: 210px;
+    height: 204px;
+  }
 `;
 
 export const Row = styled.div`
-  width: 95%;
+  width: 85%;
   ${"" /* height: 75vh; */}
   display: flex;
   flex-wrap: wrap;
@@ -64,6 +69,10 @@ export const Title = styled.h2`
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 0.7rem;
+
+  @media (max-width: 750px) {
+    font-size: 1rem;
+  }
 `;
 
 export const DescriptionContainer = styled.div`

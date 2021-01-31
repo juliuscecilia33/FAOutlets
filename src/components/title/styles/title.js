@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 export const Container = styled.div`
   width: 100%;
-  height: 20vh;
+  height: 18vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,5 +35,11 @@ export const DescrText = styled.h3`
 
   @media (max-width: 1300px) {
     font-size: 1.1rem;
+    line-height: 22px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 0.8rem;
+    line-height: 15px;
   }
 `;
