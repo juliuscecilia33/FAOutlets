@@ -11,14 +11,16 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 0 1.3rem;
+  margin: 1.2rem 5rem;
 `;
 
 export const Row = styled.div`
-  width: 100%;
-  height: 50vh;
+  width: 85%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
 `;
 
 export const Picture = styled.div`

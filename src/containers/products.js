@@ -10,26 +10,25 @@ export function ProductsContainer({ products, match, onAddToCart }) {
     (product) => product.categories[0].id === manufacturerId
   );
 
-  if (!products) return <div>Loading Products...</div>;
+  if (!products)
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "80vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Loading Products...
+      </div>
+    );
 
   return (
     <>
       <Product.Row>
-        {productFilter.slice(0, 5).map((product, index) => (
-          <Product key={index}>
-            <Product.Picture src={product.media.source} alt="Product Display" />
-            <Product.Title>{product.name}</Product.Title>
-            <Product.Description>
-              {product.description.slice(0, -4).substring(3)}
-            </Product.Description>
-            <Product.CartPrice productId={product.id} onAddToCart={onAddToCart}>
-              {product.price.formatted_with_symbol}
-            </Product.CartPrice>
-          </Product>
-        ))}
-      </Product.Row>
-      <Product.Row>
-        {productFilter.slice(5).map((product, index) => (
+        {productFilter.slice(0).map((product, index) => (
           <Product key={index}>
             <Product.Picture src={product.media.source} alt="Product Display" />
             <Product.Title>{product.name}</Product.Title>

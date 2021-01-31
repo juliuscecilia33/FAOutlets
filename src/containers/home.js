@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { Home } from "../components";
 import * as ROUTES from "../constants/routes";
 

@@ -100,7 +100,21 @@ export default function App() {
         <HeaderContainer totalItems={cart.total_items} />
 
         <Switch>
-          <Suspense fallback={<p>Loading Page...</p>}>
+          <Suspense
+            fallback={
+              <div
+                style={{
+                  width: "100%",
+                  height: "80vh",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                Loading Page...
+              </div>
+            }
+          >
             <Route path={ROUTES.HOME} exact render={() => <Home />} />
 
             <Route path={ROUTES.CONTACT} exact render={() => <Contact />} />
