@@ -1,11 +1,25 @@
 import React from "react";
 import { Title } from "../components";
 import { ManufacturersContainer } from "../containers";
-import { Manufacturer } from "../components";
 import { useRouteMatch } from "react-router-dom";
 
 export default function Manufacturers({ categories, products }) {
   const { path } = useRouteMatch();
+
+  if (!categories)
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "80vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Loading Manufacturers...
+      </div>
+    );
 
   return (
     <>
@@ -17,7 +31,7 @@ export default function Manufacturers({ categories, products }) {
         categories={categories}
         products={products}
         path={path}
-      ></ManufacturersContainer>
+      />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Manufacturer } from "../components";
 import { ProductsContext } from "../context/products";
 
-export function ManufacturersContainer({ path, categories }) {
+export default function ManufacturersContainer({ path, categories }) {
   const { setCategoryData } = useContext(ProductsContext);
 
   const updateCategoryData = (category) => {

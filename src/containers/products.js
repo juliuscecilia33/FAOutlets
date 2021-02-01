@@ -1,7 +1,7 @@
 import React from "react";
 import { Product } from "../components";
 
-export function ProductsContainer({ products, match, onAddToCart }) {
+export default function ProductsContainer({ products, match, onAddToCart }) {
   const {
     params: { manufacturerId },
   } = match;
@@ -9,21 +9,6 @@ export function ProductsContainer({ products, match, onAddToCart }) {
   const productFilter = products.filter(
     (product) => product.categories[0].id === manufacturerId
   );
-
-  if (!products)
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "80vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        Loading Products...
-      </div>
-    );
 
   return (
     <>

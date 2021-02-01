@@ -1,6 +1,6 @@
-export { ManufacturersContainer } from "./manufacturers";
+export { default as ManufacturersContainer } from "./manufacturers";
 export { HeaderContainer } from "./header";
-export { ProductsContainer } from "./products";
+export { default as ProductsContainer } from "./products";
 export { default as FooterContainer } from "./footer";
 export { CartContainer } from "./cart";
 export { AddressFormContainer } from "./addressform";
