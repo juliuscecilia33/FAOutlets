@@ -10,6 +10,12 @@ export default function ProductsContainer({ products, match, onAddToCart }) {
     (product) => product.categories[0].id === manufacturerId
   );
 
+  if (!products) {
+    console.log("getting Products");
+  } else {
+    console.log("successfully got products");
+  }
+
   return (
     <>
       <Product.Row>

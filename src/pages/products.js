@@ -8,21 +8,6 @@ import * as ROUTES from "../constants/routes";
 export default function Products({ products, match, onAddToCart }) {
   const { categoryData } = useContext(ProductsContext);
 
-  if (!products)
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "80vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        Loading Products...
-      </div>
-    );
-
   return (
     <>
       {categoryData ? (
