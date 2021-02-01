@@ -53,7 +53,7 @@ export function AddressFormContainer({ checkoutToken, next }) {
     );
 
     setShippingOptions(options);
-    setShippingOption(options[0].id);
+    setShippingOption(options[0]);
   };
 
   useEffect(() => {
@@ -71,7 +71,7 @@ export function AddressFormContainer({ checkoutToken, next }) {
         shippingCountry,
         shippingSubdivision
       );
-  }, [shippingSubdivision]);
+  }, [shippingSubdivision, checkoutToken.id, shippingCountry]);
 
   const inputStyle = {
     background: "#EF8354",
