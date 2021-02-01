@@ -63,7 +63,12 @@ export const Description = styled.p`
   }
 
   @media (max-width: 450px) {
+    width: 90%;
     font-size: 1rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -167,6 +172,11 @@ export const Submit = styled.button`
     width: 206px;
     height: 41px;
     font-size: 0.8rem;
+  }
+
+  @media (max-width: 300px) {
+    width: 156px;
+    height: 36px;
   }
 `;
 
@@ -302,5 +312,9 @@ export const Column = styled.div`
 
   @media (max-width: 900px) {
     align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
