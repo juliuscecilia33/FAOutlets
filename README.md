@@ -2,7 +2,7 @@
 <h2>An E-commerce Store that combines all Food Allergy manufacturers and products into one online hub. Website is made with React.js, Commerce.js, and Stripe.</h2>
 
 
-Prototype (Built in Figma)
+Prototype (Built by me in Figma)
 <br />
 
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/LandingPagePrototype.png)
