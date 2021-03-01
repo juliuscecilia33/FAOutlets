@@ -1,6 +1,7 @@
 # Food Allergy Outlets: An E-commerce Store that combines all Food Allergy manufacturers and products into one online hub!
 
-
+### faoutlets.netlify.app/
+<br />
 Prototype (Built by me in Figma)
 <br />
 
