@@ -1,6 +1,11 @@
 ![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/Display.png)
 # Food Allergy Outlets: An E-commerce Store that combines all Food Allergy manufacturers and products into one online hub! Check it out [Here!](faoutlets.netlify.app/)
 <br />
+
+## Technologies Used
+![FAOutlets](https://github.com/juliuscecilia33/FAOutlets/blob/main/public/images/Logos.png)
+
+<br />
 Prototype (Built by me in Figma)
 <br />
 
